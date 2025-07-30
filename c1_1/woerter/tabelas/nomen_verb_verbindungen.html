@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2. Nomen-Verb-Verbindungen - C1_1</title>
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f3f4f6;
+    padding: 2rem;
+    margin: 0;
+  }
+
+  h1 {
+    color: #ea580c; /* laranja forte */
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  #search_input {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    max-width: 600px;
+    font-size: 1rem;
+    border: 2px solid #fb923c;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: border-color 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff7ed;
+    color: #b45309;
+  }
+
+  #search_input:focus {
+    border-color: #ea580c;
+  }
+
+  #search_input::placeholder {
+    color: #c2410c;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgb(251 146 60 / 0.25);
+    border: 1px solid #fb923c;
+  }
+
+  thead {
+    background: linear-gradient(90deg, #fb923c, #fdba74);
+    color: white;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 3px 6px rgb(251 146 60 / 0.7);
+    z-index: 10;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: #fff7ed;
+  }
+
+  tbody tr:hover {
+    background-color: #fed7aa;
+    cursor: pointer;
+  }
+
+  th, td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #fed7aa;
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  th.sortable {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+  }
+
+  th.sortable:hover {
+    background-color: rgba(255 255 255 / 0.2);
+  }
+
+  th .sort-arrow {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    opacity: 0.6;
+    color: white;
+  }
+
+  th .sort-arrow.active {
+    opacity: 1;
+    color: #c2410c;
+  }
+
+  /* Inputs filtro por coluna */
+  th input.filter-input {
+    margin-top: 4px;
+    width: 95%;
+    padding: 3px 6px;
+    border-radius: 0.25rem;
+    border: none;
+    font-size: 0.85rem;
+    background-color: #ffedd5;
+    color: #b45309;
+  }
+
+  th input.filter-input::placeholder {
+    color: #c2410c;
+  }
+
+  /* Responsivo para mobile: scroll horizontal e ajustes */
+  @media (max-width: 768px) {
+    table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    th, td {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.9rem;
+    }
+    #search_input {
+      font-size: 0.9rem;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  /* Estilo descritivo Nomen-Verb-Verbindungen */
+  .nvv-description {
+    max-width: 700px;
+    margin: 1.5rem auto 2.5rem auto;
+    color: #475569;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    text-align: justify;
+    background: #ffffffcc;
+    padding: 1.5rem 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 6px 15px rgb(99 102 241 / 0.1);
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .nvv-description em {
+    font-style: italic;
+    color: #7c3aed;
+    font-weight: 600;
+  }
+
+  /* Estilo para o Nomen destacado no texto da coluna */
+  .highlight-nomen {
+    color: #c2410c; /* laranja escuro */
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+
+<h1>2. Nomen-Verb-Verbindungen</h1>
+
+<div class="nvv-description">
+  Nomen-Verb-Verbindungen bestehen aus einem Nomen und einem Verb. Nicht die Verben, sondern die Nomen
+  tragen hier die Hauptbedeutung. Manchmal kommt ein Artikel (<em>z.B. der Ansicht sein</em>) oder eine Präposition (<em>z.B. in Angst versetzen</em>) dazu.<br><br>
+  Oft gibt es zu diesen Verbindungen ein einfaches Verb mit einer ähnlichen Bedeutung (<em>z.B. eine Entscheidung treffen → entscheiden</em>).<br><br>
+  Einige Nomen-Verb-Verbindungen können eine aktive (<em>z.B. unter Druck setzen</em>) oder eine passive (<em>z.B. unter Druck stehen</em>) Bedeutung haben.
+</div>
+
+<input
+  type="text"
+  id="search_input"
+  placeholder="Pesquisar na tabela inteira..."
+  aria-label="Pesquisar na tabela"
+/>
+
+<table id="nvv_table" aria-describedby="search_input">
+  <thead>
+    <tr>
+      <th class="sortable" data-column="Nomen-Verb-Verbindung" tabindex="0" aria-sort="none" aria-label="Nomen-Verb-Verbindung, clicar para ordenar">
+        Nomen-Verb-Verbindung
+        <span class="sort-arrow">&#9650;</span>
+      </th>
+      <th class="sortable" data-column="Bedeutung" tabindex="0" aria-sort="none" aria-label="Bedeutung, clicar para ordenar">
+        Bedeutung
+        <span class="sort-arrow">&#9650;</span>
+      </th>
+      <th class="sortable" data-column="Exemplo" tabindex="0" aria-sort="none" aria-label="Exemplo, clicar para ordenar">
+        Exemplo
+        <span class="sort-arrow">&#9650;</span>
+      </th>
+      <!-- Coluna Nomen oculta -->
+    </tr>
+    <tr>
+      <th><input type="text" class="filter-input" data-column="Nomen-Verb-Verbindung" placeholder="Filtrar Nomen-Verb-Verbindung" aria-label="Filtrar Nomen-Verb-Verbindung"/></th>
+      <th><input type="text" class="filter-input" data-column="Bedeutung" placeholder="Filtrar Bedeutung" aria-label="Filtrar Bedeutung"/></th>
+      <th><input type="text" class="filter-input" data-column="Exemplo" placeholder="Filtrar Exemplo" aria-label="Filtrar Exemplo"/></th>
+      <!-- Filtro Nomen oculto -->
+    </tr>
+  </thead>
+  <tbody id="table_body">
+    <!-- Linhas serão inseridas dinamicamente -->
+  </tbody>
+</table>
+
+<script>
+  const jsonUrl = '../data/nomen_verb_verbindungen.json';
+
+  const tbody = document.getElementById('table_body');
+  const searchInput = document.getElementById('search_input');
+  const filterInputs = document.querySelectorAll('input.filter-input');
+  const headers = document.querySelectorAll('th.sortable');
+
+  let data = [];
+  let sortColumn = null;
+  let sortDirection = 'asc';
+
+  function normalizeString(str) {
+    return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  async function fetchData() {
+    try {
+      const res = await fetch(jsonUrl);
+      if (!res.ok) throw new Error('Erro ao carregar JSON');
+      data = await res.json();
+      renderTable(data);
+    } catch (e) {
+      tbody.innerHTML = `<tr><td colspan="3" style="color:red; text-align:center;">Erro ao carregar dados: ${e.message}</td></tr>`;
+    }
+  }
+
+  function escapeRegExp(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function renderTable(dataToRender) {
+    tbody.innerHTML = '';
+    dataToRender.forEach(item => {
+      // Destacar Nomen no texto da coluna "Nomen-Verb-Verbindung"
+      let nvText = item['Nomen-Verb-Verbindung'];
+      const nomen = item.Nomen;
+      if (nomen && nvText) {
+        const regex = new RegExp(`(${escapeRegExp(nomen)})`, 'gi');
+        nvText = nvText.replace(regex, `<span class="highlight-nomen">$1</span>`);
+      }
+
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${nvText}</td>
+        <td>${item.Bedeutung}</td>
+        <td>${item.Exemplo}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  function applyFilters() {
+    const generalFilter = normalizeString(searchInput.value);
+
+    const columnFilters = {};
+    filterInputs.forEach(input => {
+      columnFilters[input.dataset.column] = normalizeString(input.value);
+    });
+
+    const filtered = data.filter(item => {
+      // Verifica filtro geral em todas as colunas, incluindo Nomen mas não exibida
+      const matchGeneral = Object.values(item).some(val =>
+        normalizeString(val).includes(generalFilter)
+      );
+
+      // Verifica filtros individuais nas colunas visíveis
+      const matchColumns = Object.entries(columnFilters).every(([col, val]) => {
+        if (!val) return true;
+        return normalizeString(item[col]).includes(val);
+      });
+
+      return matchGeneral && matchColumns;
+    });
+
+    renderTable(filtered);
+  }
+
+  function sortData(column) {
+    if (sortColumn === column) {
+      sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+    } else {
+      sortColumn = column;
+      sortDirection = 'asc';
+    }
+
+    data.sort((a, b) => {
+      const valA = normalizeString(a[column]);
+      const valB = normalizeString(b[column]);
+      if (valA < valB) return sortDirection === 'asc' ? -1 : 1;
+      if (valA > valB) return sortDirection === 'asc' ? 1 : -1;
+      return 0;
+    });
+
+    applyFilters();
+    updateSortUI();
+  }
+
+  function updateSortUI() {
+    headers.forEach(h => {
+      const col = h.dataset.column;
+      const arrow = h.querySelector('.sort-arrow');
+      if (col === sortColumn) {
+        arrow.classList.add('active');
+        arrow.innerHTML = sortDirection === 'asc' ? '&#9650;' : '&#9660;';
+        h.setAttribute('aria-sort', sortDirection === 'asc' ? 'ascending' : 'descending');
+      } else {
+        arrow.classList.remove('active');
+        arrow.innerHTML = '&#9650;';
+        h.setAttribute('aria-sort', 'none');
+      }
+    });
+  }
+
+  searchInput.addEventListener('input', applyFilters);
+  filterInputs.forEach(input => input.addEventListener('input', applyFilters));
+  headers.forEach(h => h.addEventListener('click', () => sortData(h.dataset.column)));
+
+  fetchData();
+</script>
+
+</body>
+</html>

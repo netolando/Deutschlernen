@@ -1,0 +1,620 @@
+[
+  {
+    "artigo": "die",
+    "substantivo": "Abhängigkeit",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Abschied",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Abstand",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "das",
+    "substantivo": "Angebot",
+    "preposicao": "an",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Angst",
+    "preposicao": "vor",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Anspruch",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Antwort",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Appetit",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Ausbildung",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Auskunft",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "das",
+    "substantivo": "Außergewöhnliche",
+    "preposicao": "an",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Aussicht",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Austausch",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Auswirkung",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Basis",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Bedarf",
+    "preposicao": "an",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Begabung",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Begegnung",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Begeisterung",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Beihilfe",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "das",
+    "substantivo": "Beispiel",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Bericht",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Beweis",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "das",
+    "substantivo": "Bewusstsein",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Beziehung",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Blick",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Chance",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Diskussion",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Druck",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Einfluss",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Einladung",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Einstellung",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Einstieg",
+    "preposicao": "in",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Eintrittskarte",
+    "preposicao": "in",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "das",
+    "substantivo": "Engagement",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Erfahrung",
+    "preposicao": "in",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Erfahrung",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Erinnerung",
+    "preposicao": "an",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Erwartung",
+    "preposicao": "an",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "das",
+    "substantivo": "Feedback",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Fokus",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Gedanke",
+    "preposicao": "an",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Gedanke",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "das",
+    "substantivo": "Gespräch",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Grund",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Gruß",
+    "preposicao": "an",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "in",
+    "substantivo": "Hinblick",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Hinweis",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "das",
+    "substantivo": "Interesse",
+    "preposicao": "an",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Kampf",
+    "preposicao": "um",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Kampf",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Kommunikation",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Konflikt",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Kontakt",
+    "preposicao": "nach",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Kritik",
+    "preposicao": "an",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Liebe",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Mangel",
+    "preposicao": "an",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Maßnahme",
+    "preposicao": "für / gegen",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Meinung",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "das",
+    "substantivo": "Mittel",
+    "preposicao": "gegen",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Nachfrage",
+    "preposicao": "nach",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Nähe",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Nähe",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Neid",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "das",
+    "substantivo": "Pech",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "das",
+    "substantivo": "Problem",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Respekt",
+    "preposicao": "vor",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Rücksicht",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Schnittstelle",
+    "preposicao": "zwischen",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Schutz",
+    "preposicao": "vor",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Sicht",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Sorge",
+    "preposicao": "um",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Spaß",
+    "preposicao": "an",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Streit",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Streit",
+    "preposicao": "um",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Suche",
+    "preposicao": "nach",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Sucht",
+    "preposicao": "nach",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "das",
+    "substantivo": "Symbol",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "das",
+    "substantivo": "Talent",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Teilnahme",
+    "preposicao": "an",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Toleranz",
+    "preposicao": "gegenüber",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Trend",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Überblick",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Umgang",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Unklarheit",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Verantwortung",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Vergleich",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "im",
+    "substantivo": "Vergleich",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "das",
+    "substantivo": "Verhältnis",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "das",
+    "substantivo": "Verständnis",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "das",
+    "substantivo": "Vertrauen",
+    "preposicao": "in",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Voraussetzung",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Werbung",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Wert",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Widerstand",
+    "preposicao": "gegen",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "das",
+    "substantivo": "Wiedersehen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Wirkung",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "das",
+    "substantivo": "Wissen",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Wunsch",
+    "preposicao": "nach",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "die",
+    "substantivo": "Zahl",
+    "preposicao": "an",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "das",
+    "substantivo": "Zeichen",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Zugang",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "artigo": "der",
+    "substantivo": "Zweifel",
+    "preposicao": "an",
+    "caso": "Dativ"
+  }
+]

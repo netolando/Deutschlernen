@@ -1,0 +1,817 @@
+[
+  {
+    "verbo": "abhängen",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "(sich) abheben",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "abstimmen",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "abweichen",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "achten",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "anbinden",
+    "preposicao": "an",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "anfangen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "angeben",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "ankommen",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "(sich) anmelden",
+    "preposicao": "bei",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "(sich) anmelden",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "(sich) anpassen",
+    "preposicao": "an",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "ansprechen",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "arbeiten",
+    "preposicao": "als",
+    "caso": "Nominativ"
+  },
+  {
+    "verbo": "arbeiten",
+    "preposicao": "an",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "aufbauen",
+    "preposicao": "auf",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "aufkommen",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "aufmerksam machen",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "aufpassen",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "sich aufregen",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "aufrufen",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich auseinandersetzen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "ausgehen",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich auskennen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "auskommen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich auswirken",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "sich auszeichnen",
+    "preposicao": "durch",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "sich bedanken",
+    "preposicao": "bei",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich bedanken",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "sich befassen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "(sich) begeistern",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "beitragen",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich bemühen",
+    "preposicao": "um",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "(sich) beschäftigen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "(sich) beschränken",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "bestehen",
+    "preposicao": "aus",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "bestehen",
+    "preposicao": "in",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich bewerben",
+    "preposicao": "als",
+    "caso": "Nominativ"
+  },
+  {
+    "verbo": "sich bewerben",
+    "preposicao": "um",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "bewundern",
+    "preposicao": "an",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "bezeichnen",
+    "preposicao": "als",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "sich beziehen",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "bitten",
+    "preposicao": "um",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "danken",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "denken",
+    "preposicao": "an",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "denken",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "dienen",
+    "preposicao": "als",
+    "caso": "Nominativ"
+  },
+  {
+    "verbo": "sich drehen",
+    "preposicao": "um",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "sich drücken",
+    "preposicao": "vor",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich eignen",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "eingehen",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "einhergehen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich einigen",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "einladen",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "(sich) einschreiben",
+    "preposicao": "an",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "(sich) einschreiben",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "(sich) einsetzen",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "(sich) einstellen",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "einwenden",
+    "preposicao": "gegen",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "(sich) entfremden",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich entscheiden",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "entscheiden",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "(sich) entscheiden",
+    "preposicao": "zwischen",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "erfahren",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "erfüllen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "erkennen",
+    "preposicao": "an",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich erkundigen",
+    "preposicao": "nach",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "erzählen",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "fliehen",
+    "preposicao": "vor",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "forschen",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "fragen",
+    "preposicao": "nach",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "führen",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich fürchten",
+    "preposicao": "vor",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "gehören",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "es geht",
+    "preposicao": "um",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "gelten",
+    "preposicao": "als",
+    "caso": "Nominativ"
+  },
+  {
+    "verbo": "geradestehen",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "(sich) gewöhnen",
+    "preposicao": "an",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "glauben",
+    "preposicao": "an",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "gratulieren",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich halten",
+    "preposicao": "an",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "halten",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "halten",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "handeln",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "es handelt sich",
+    "preposicao": "um",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "helfen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "hindeuten",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "hinweisen",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "hoffen",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "hören",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "(sich) informieren",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "investieren",
+    "preposicao": "in",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "kämpfen",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "kämpfen",
+    "preposicao": "gegen",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "kämpfen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "klagen",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "kommunizieren",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich konzentrieren",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "lachen",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "leben",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "leiden",
+    "preposicao": "an",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "leiden",
+    "preposicao": "unter",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "liegen",
+    "preposicao": "an",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "liegen",
+    "preposicao": "in",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "es mangelt",
+    "preposicao": "an",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "(sich) melden",
+    "preposicao": "bei",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "nachdenken",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "plädieren",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "profitieren",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "protestieren",
+    "preposicao": "gegen",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "reagieren",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "rechnen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "reden",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich richten",
+    "preposicao": "an",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "riechen",
+    "preposicao": "nach",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "scheitern",
+    "preposicao": "an",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "schimpfen",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "schmecken",
+    "preposicao": "nach",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "(sich) schützen",
+    "preposicao": "vor",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich sehnen",
+    "preposicao": "nach",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich selbstständig machen",
+    "preposicao": "als",
+    "caso": "Nominativ"
+  },
+  {
+    "verbo": "sorgen",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "sprechen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sprechen",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "stehen",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "stehen",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "(sich) stoßen",
+    "preposicao": "an",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "(sich) stoßen",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "streiken",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "sich streiten",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "suchen",
+    "preposicao": "nach",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "träumen",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich treffen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "(sich) trennen",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "zu tun haben",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "übereinstimmen",
+    "preposicao": "in",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "überreden",
+    "preposicao": "zu",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "überzeugen",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "umgehen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich unterhalten",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "(sich) unterscheiden",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "urteilen",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "sich verabreden",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "verbinden",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "vergleichen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "verknüpfen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich verlassen",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "(sich) vernetzen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich verständigen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "sich verständigen",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "sich verstehen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "verstehen",
+    "preposicao": "unter",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "verstoßen",
+    "preposicao": "gegen",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "verweisen",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "verzichten",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "sich wenden",
+    "preposicao": "an",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "werben",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "sich wundern",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "zählen",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "zeugen",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "zurückführen",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "verbo": "zusammenhängen",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "verbo": "zweifeln",
+    "preposicao": "an",
+    "caso": "Dativ"
+  }
+]

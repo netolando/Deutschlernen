@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Verben / Nomen / Adjektive mit fester Präposition - C1_1</title>
+<style>
+  /* Estilos base */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f3f4f6;
+  padding: 2rem;
+  margin: 0;
+}
+
+h1 {
+  color: #ea580c; /* laranja forte */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+#search_input {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1rem;
+  border: 2px solid #fb923c;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border-color 0.3s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff7ed;
+  color: #b45309;
+}
+
+#search_input:focus {
+  border-color: #ea580c;
+}
+
+#search_input::placeholder {
+  color: #c2410c;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgb(251 146 60 / 0.25);
+  border: 1px solid #fb923c;
+}
+
+thead {
+  background: linear-gradient(90deg, #fb923c, #fdba74);
+  color: white;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 3px 6px rgb(251 146 60 / 0.7);
+  z-index: 10;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff7ed;
+}
+
+tbody tr:hover {
+  background-color: #fed7aa;
+  cursor: pointer;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #fed7aa;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+th.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+th.sortable:hover {
+  background-color: rgba(255 255 255 / 0.2);
+}
+
+th .sort-arrow {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.7rem;
+  opacity: 0.6;
+  color: white;
+}
+
+th .sort-arrow.active {
+  opacity: 1;
+  color: #c2410c;
+}
+
+/* Inputs filtro por coluna */
+th input.filter-input {
+  margin-top: 4px;
+  width: 90%;
+  padding: 3px 6px;
+  border-radius: 0.25rem;
+  border: none;
+  font-size: 0.85rem;
+  background-color: #ffedd5;
+  color: #b45309;
+}
+
+th input.filter-input::placeholder {
+  color: #c2410c;
+}
+
+/* Cores para casos */
+.caso-dativ {
+  color: #065f46; /* verde escuro */
+  font-weight: 700;
+}
+
+.caso-akkusativ {
+  color: #9d174d; /* rosa escuro */
+  font-weight: 700;
+}
+
+.caso-nominativ {
+  color: #1e40af; /* azul escuro */
+  font-weight: 700;
+}
+
+/* Responsivo para mobile: scroll horizontal e ajustes */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  th, td {
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+  }
+  #search_input {
+    font-size: 0.9rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<h1>Verben / Nomen / Adjektive mit fester Präposition</h1>
+
+<input
+  type="text"
+  id="search_input"
+  placeholder="Pesquisar na tabela inteira..."
+  aria-label="Pesquisar na tabela"
+/>
+
+<table id="preposicoes_table" aria-describedby="search_input">
+  <thead>
+    <tr>
+      <th class="sortable" data-column="verbo" tabindex="0" aria-sort="none" aria-label="Verbo, clicar para ordenar">
+        Verbo
+        <span class="sort-arrow">&#9650;</span>
+      </th>
+      <th class="sortable" data-column="preposicao" tabindex="0" aria-sort="none" aria-label="Preposição, clicar para ordenar">
+        Preposição
+        <span class="sort-arrow">&#9650;</span>
+      </th>
+      <th class="sortable" data-column="caso" tabindex="0" aria-sort="none" aria-label="Caso, clicar para ordenar">
+        Caso
+        <span class="sort-arrow">&#9650;</span>
+      </th>
+    </tr>
+    <tr>
+      <th><input type="text" class="filter-input" data-column="verbo" placeholder="Filtrar verbo" aria-label="Filtrar verbo"/></th>
+      <th><input type="text" class="filter-input" data-column="preposicao" placeholder="Filtrar preposição" aria-label="Filtrar preposição"/></th>
+      <th><input type="text" class="filter-input" data-column="caso" placeholder="Filtrar caso" aria-label="Filtrar caso"/></th>
+    </tr>
+  </thead>
+  <tbody id="table_body">
+    <!-- Linhas serão inseridas dinamicamente -->
+  </tbody>
+</table>
+
+<script>
+  const jsonUrl = '../data/verben_preposicao_caso.json';
+
+  const tbody = document.getElementById('table_body');
+  const searchInput = document.getElementById('search_input');
+  const filterInputs = document.querySelectorAll('input.filter-input');
+  const headers = document.querySelectorAll('th.sortable');
+
+  let data = [];
+  let sortColumn = null;
+  let sortDirection = 'asc';
+
+  // Normaliza string para ignorar acentos
+  function normalizeString(str) {
+    return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  async function fetchData() {
+    try {
+      const res = await fetch(jsonUrl);
+      if (!res.ok) throw new Error('Erro ao carregar JSON');
+      data = await res.json();
+      renderTable(data);
+    } catch (e) {
+      tbody.innerHTML = `<tr><td colspan="3" style="color:red; text-align:center;">Erro ao carregar dados: ${e.message}</td></tr>`;
+    }
+  }
+
+  function renderTable(dataToRender) {
+    tbody.innerHTML = '';
+    dataToRender.forEach(item => {
+      let casoClass = '';
+      const casoLower = item.caso.toLowerCase();
+      if (casoLower === 'dativ') {
+        casoClass = 'caso-dativ';
+      } else if (casoLower === 'akkusativ') {
+        casoClass = 'caso-akkusativ';
+      } else if (casoLower === 'nominativ') {
+        casoClass = 'caso-nominativ';
+      }
+
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${item.verbo}</td>
+        <td>${item.preposicao}</td>
+        <td class="${casoClass}">${item.caso}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  function applyFilters() {
+    const generalFilter = normalizeString(searchInput.value);
+
+    const columnFilters = {};
+    filterInputs.forEach(input => {
+      columnFilters[input.dataset.column] = normalizeString(input.value);
+    });
+
+    const filtered = data.filter(item => {
+      const matchGeneral = Object.values(item).some(val =>
+        normalizeString(val).includes(generalFilter)
+      );
+
+      const matchColumns = Object.entries(columnFilters).every(([col, val]) => {
+        if (!val) return true;
+        return normalizeString(item[col]).includes(val);
+      });
+
+      return matchGeneral && matchColumns;
+    });
+
+    renderTable(filtered);
+  }
+
+  function sortData(column) {
+    if (sortColumn === column) {
+      sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+    } else {
+      sortColumn = column;
+      sortDirection = 'asc';
+    }
+
+    data.sort((a, b) => {
+      const valA = normalizeString(a[column]);
+      const valB = normalizeString(b[column]);
+      if (valA < valB) return sortDirection === 'asc' ? -1 : 1;
+      if (valA > valB) return sortDirection === 'asc' ? 1 : -1;
+      return 0;
+    });
+
+    applyFilters();
+    updateSortUI();
+  }
+
+  function updateSortUI() {
+    headers.forEach(h => {
+      const col = h.dataset.column;
+      const arrow = h.querySelector('.sort-arrow');
+      if (col === sortColumn) {
+        arrow.classList.add('active');
+        arrow.innerHTML = sortDirection === 'asc' ? '&#9650;' : '&#9660;';
+        h.setAttribute('aria-sort', sortDirection === 'asc' ? 'ascending' : 'descending');
+      } else {
+        arrow.classList.remove('active');
+        arrow.innerHTML = '&#9650;';
+        h.setAttribute('aria-sort', 'none');
+      }
+    });
+  }
+
+  searchInput.addEventListener('input', applyFilters);
+  filterInputs.forEach(input => input.addEventListener('input', applyFilters));
+  headers.forEach(h => h.addEventListener('click', () => sortData(h.dataset.column)));
+
+  fetchData();
+</script>
+
+</body>
+</html>

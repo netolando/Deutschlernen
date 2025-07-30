@@ -1,0 +1,334 @@
+/* Font Inter */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom styles for table hover effect and striped rows */
+.striped-table tbody tr:nth-child(odd) {
+    background-color: #f8fafc; /* bg-slate-50 */
+}
+.striped-table tbody tr:hover {
+    background-color: #e0f2fe; /* bg-sky-100 */
+}
+
+/* Style for sortable header */
+.sortable-header {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sort-icon {
+    margin-left: 0.5rem;
+    font-size: 0.8em;
+    color: #64748b; /* slate-500 */
+}
+
+/* Highlight style for grammar elements */
+.grammar-highlight {
+    background-color: #fef08a; /* yellow-200 */
+    color: #991b1b; /* red-800 */
+    font-weight: 600; /* font-semibold */
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.25rem;
+}
+
+/* Background gradient and layout for body */
+body.bg-gradient-to-br {
+    background-image: linear-gradient(to bottom right, #bfdbfe, #c4b5fd);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0;
+}
+
+/* Container styling */
+.max-w-6xl {
+    max-width: 72rem; /* 1152px */
+}
+.w-full {
+    width: 100%;
+}
+.bg-white {
+    background-color: white;
+}
+.rounded-2xl {
+    border-radius: 1rem;
+}
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+.p-6 {
+    padding: 1.5rem;
+}
+.md\:p-10 {
+    padding: 2.5rem;
+}
+
+/* Headings */
+.text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+.md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+}
+.font-extrabold {
+    font-weight: 800;
+}
+.text-center {
+    text-align: center;
+}
+.text-gray-800 {
+    color: #1e293b;
+}
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+/* Navigation Tabs */
+.flex {
+    display: flex;
+}
+.justify-center {
+    justify-content: center;
+}
+.border-b {
+    border-bottom-width: 1px;
+}
+.border-gray-200 {
+    border-color: #e5e7eb;
+}
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+.text-lg {
+    font-size: 1.125rem;
+}
+.font-medium {
+    font-weight: 500;
+}
+.text-gray-700 {
+    color: #374151;
+}
+.border-b-2 {
+    border-bottom-width: 2px;
+}
+.border-transparent {
+    border-color: transparent;
+}
+.hover\:border-indigo-500:hover {
+    border-color: #6366f1;
+}
+.hover\:text-indigo-600:hover {
+    color: #4f46e5;
+}
+.focus\:outline-none:focus {
+    outline: 0;
+}
+.transition {
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ease-in-out {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Table styles */
+.min-w-full {
+    min-width: 100%;
+}
+.divide-y > :not(template) ~ :not(template) {
+    border-top-width: 1px;
+}
+.divide-gray-200 > :not(template) ~ :not(template) {
+    border-color: #e5e7eb;
+}
+.bg-gray-50 {
+    background-color: #f9fafb;
+}
+.text-left {
+    text-align: left;
+}
+.text-xs {
+    font-size: 0.75rem;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.tracking-wider {
+    letter-spacing: 0.05em;
+}
+
+/* Table header and cell padding */
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+.whitespace-nowrap {
+    white-space: nowrap;
+}
+.text-sm {
+    font-size: 0.875rem;
+}
+.font-medium {
+    font-weight: 500;
+}
+.text-gray-500 {
+    color: #6b7280;
+}
+.text-gray-900 {
+    color: #111827;
+}
+.text-gray-700 {
+    color: #374151;
+}
+
+/* Flexbox for column and row layout */
+.flex-col {
+    flex-direction: column;
+}
+.md\:flex-row {
+    flex-direction: row;
+}
+.gap-6 {
+    gap: 1.5rem;
+}
+
+/* Sidebar */
+.bg-red-50 {
+    background-color: #fef2f2;
+}
+.rounded-xl {
+    border-radius: 0.75rem;
+}
+.shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.p-4 {
+    padding: 1rem;
+}
+
+/* Button styles inside sidebar */
+.grammar-nav-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.grammar-nav-btn.text-left {
+    text-align: left;
+}
+.grammar-nav-btn.w-full {
+    width: 100%;
+}
+.grammar-nav-btn.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.grammar-nav-btn.py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.text-gray-700 {
+    color: #374151;
+}
+.hover\:bg-red-100:hover {
+    background-color: #fee2e2;
+}
+.hover\:text-red-700:hover {
+    color: #b91c1c;
+}
+.transition {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* Content area */
+.bg-white {
+    background-color: white;
+}
+.p-6 {
+    padding: 1.5rem;
+}
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+/* Inputs */
+input#grammarSearchInput,
+input#searchInput {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0 0 transparent;
+    color: #374151;
+    font-size: 1rem;
+    outline-offset: 2px;
+}
+input#grammarSearchInput:focus,
+input#searchInput:focus {
+    outline: none;
+    border-color: #ef4444; /* red-500 */
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.4);
+}
+
+/* Buttons */
+button#clearSearchButton {
+    padding: 0.5rem 1.25rem;
+    background-color: #e5e7eb; /* gray-200 */
+    color: #374151;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+button#clearSearchButton:hover {
+    background-color: #d1d5db; /* gray-300 */
+}
+button#originalOrderButton {
+    padding: 0.5rem 1.25rem;
+    background-color: #3b82f6; /* blue-500 */
+    color: white;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+button#originalOrderButton:hover {
+    background-color: #2563eb; /* blue-600 */
+}
+
+/* Responsive flex for search input container */
+.flex.flex-col.sm\:flex-row.items-center.gap-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+@media(min-width: 640px) {
+    .sm\:flex-row {
+        flex-direction: row;
+    }
+    .items-center {
+        align-items: center;
+    }
+}

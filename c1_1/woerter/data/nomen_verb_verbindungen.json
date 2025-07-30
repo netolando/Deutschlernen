@@ -1,0 +1,578 @@
+[
+  {
+    "Nomen-Verb-Verbindung": "an jdn. / etwas Anforderungen stellen",
+    "Bedeutung": "an etw. Ansprüche haben",
+    "Exemplo": "Viele Kunden stellen hohe Anforderungen an den Kundenservice.",
+    "Nomen": "Anforderungen"
+  },
+  {
+    "Nomen-Verb-Verbindung": "jdn. in Angst versetzen",
+    "Bedeutung": "jdm. Angst machen",
+    "Exemplo": "Die plötzliche Nachricht versetzte alle in Angst.",
+    "Nomen": "Angst"
+  },
+  {
+    "Nomen-Verb-Verbindung": "der Ansicht sein",
+    "Bedeutung": "meinen",
+    "Exemplo": "Wir sind der Ansicht, dass das Projekt erfolgreich abgeschlossen wird.",
+    "Nomen": "Ansicht"
+  },
+  {
+    "Nomen-Verb-Verbindung": "etw. (Akk.) in Anspruch nehmen",
+    "Bedeutung": "nutzen",
+    "Exemplo": "Er nimmt regelmäßig die Angebote der Bibliothek in Anspruch.",
+    "Nomen": "Anspruch"
+  },
+  {
+    "Nomen-Verb-Verbindung": "eine Anstrengung auf sich nehmen",
+    "Bedeutung": "sich anstrengen",
+    "Exemplo": "Viele Sportler nehmen große Anstrengungen auf sich, um ihre Ziele zu erreichen.",
+    "Nomen": "Anstrengung"
+  },
+  {
+    "Nomen-Verb-Verbindung": "für Aufsehen sorgen",
+    "Bedeutung": "aufregen",
+    "Exemplo": "Die neue Ausstellung sorgt in der Kunstszene für großes Aufsehen.",
+    "Nomen": "Aufsehen"
+  },
+  {
+    "Nomen-Verb-Verbindung": "zu etw. Beihilfe leisten",
+    "Bedeutung": "bei etw. helfen",
+    "Exemplo": "Er leistete zu dem Diebstahl Beihilfe.",
+    "Nomen": "Beihilfe"
+  },
+  {
+    "Nomen-Verb-Verbindung": "jdm. Bescheid geben",
+    "Bedeutung": "etw. mitteilen",
+    "Exemplo": "Bitte gib mir Bescheid, wenn du heute Abend Zeit hast.",
+    "Nomen": "Bescheid"
+  },
+  {
+    "Nomen-Verb-Verbindung": "jdm. Bescheid sagen",
+    "Bedeutung": "etw. mitteilen",
+    "Exemplo": "Ich wollte dir nur kurz Bescheid sagen, dass das Treffen verschoben wurde.",
+    "Nomen": "Bescheid"
+  },
+  {
+    "Nomen-Verb-Verbindung": "über jdn. / etw. Bescheid wissen",
+    "Bedeutung": "über jdn. / etw. informiert sein",
+    "Exemplo": "Nur wenige wussten über die Änderungen Bescheid.",
+    "Nomen": "Bescheid"
+  },
+  {
+    "Nomen-Verb-Verbindung": "bei jdm. zu Besuch sein",
+    "Bedeutung": "jdn. besuchen",
+    "Exemplo": "Ich bin am Wochenende bei meiner Tante zu Besuch.",
+    "Nomen": "Besuch"
+  },
+  {
+    "Nomen-Verb-Verbindung": "den Betrieb aufnehmen",
+    "Bedeutung": "mit etw. beginnen",
+    "Exemplo": "Die neue Fabrik wird nächsten Monat den Betrieb aufnehmen.",
+    "Nomen": "Betrieb"
+  },
+  {
+    "Nomen-Verb-Verbindung": "etw. (Akk.) unter Beweis stellen",
+    "Bedeutung": "etw. beweisen",
+    "Exemplo": "Die Kandidatin konnte ihr Fachwissen im Vorstellungsgespräch unter Beweis stellen.",
+    "Nomen": "Beweis"
+  },
+  {
+    "Nomen-Verb-Verbindung": "einen Blick auf etw. (Akk.) werfen",
+    "Bedeutung": "sich etw. genauer ansehen",
+    "Exemplo": "Wir werfen heute einen Blick auf die neuesten Forschungsergebnisse.",
+    "Nomen": "Blick"
+  },
+  {
+    "Nomen-Verb-Verbindung": "jdn. / etw. im Blick haben",
+    "Bedeutung": "jdn. / etw. in seine Überlegungen miteinbeziehen",
+    "Exemplo": "Der Manager hat immer alle wichtigen Entwicklungen im Blick.",
+    "Nomen": "Blick"
+  },
+  {
+    "Nomen-Verb-Verbindung": "jdn. unter Druck setzen",
+    "Bedeutung": "jdn. bedrängen",
+    "Exemplo": "Die Vorgesetzten setzen ihre Mitarbeiter oft unter Druck.",
+    "Nomen": "Druck"
+  },
+  {
+    "Nomen-Verb-Verbindung": "unter Druck stehen",
+    "Bedeutung": "gestresst sein",
+    "Exemplo": "Viele Schüler stehen vor Prüfungen unter großem Druck.",
+    "Nomen": "Druck"
+  },
+  {
+    "Nomen-Verb-Verbindung": "auf jdn. / etw. Einfluss haben",
+    "Bedeutung": "jdn. / etw. beeinflussen (können)",
+    "Exemplo": "Das Wetter hat großen Einfluss auf die Ernte.",
+    "Nomen": "Einfluss"
+  },
+  {
+    "Nomen-Verb-Verbindung": "am Ende sein",
+    "Bedeutung": "nicht mehr können",
+    "Exemplo": "Nach der langen Wanderung war sie körperlich am Ende.",
+    "Nomen": "Ende"
+  },
+  {
+    "Nomen-Verb-Verbindung": "zu Ende gehen",
+    "Bedeutung": "enden",
+    "Exemplo": "Das Jahr geht bald zu Ende.",
+    "Nomen": "Ende"
+  },
+  {
+    "Nomen-Verb-Verbindung": "zu Ende sein",
+    "Bedeutung": "enden, beendet sein",
+    "Exemplo": "Die Veranstaltung war pünktlich zu Ende.",
+    "Nomen": "Ende"
+  },
+  {
+    "Nomen-Verb-Verbindung": "eine Entscheidung treffen",
+    "Bedeutung": "entscheiden",
+    "Exemplo": "Die Kommission trifft heute eine wichtige Entscheidung.",
+    "Nomen": "Entscheidung"
+  },
+  {
+    "Nomen-Verb-Verbindung": "einen Entschluss fassen",
+    "Bedeutung": "sich entschließen",
+    "Exemplo": "Sie fasste den Entschluss, im Ausland zu studieren.",
+    "Nomen": "Entschluss"
+  },
+  {
+    "Nomen-Verb-Verbindung": "ein Ergebnis erzielen",
+    "Bedeutung": "ein Ergebnis erreichen",
+    "Exemplo": "Das Team erzielte bei dem Wettbewerb ein hervorragendes Ergebnis.",
+    "Nomen": "Ergebnis"
+  },
+  {
+    "Nomen-Verb-Verbindung": "zu einem Ergebnis kommen",
+    "Bedeutung": "herausfinden",
+    "Exemplo": "Nach langer Diskussion kam man zu einem gemeinsamen Ergebnis.",
+    "Nomen": "Ergebnis"
+  },
+  {
+    "Nomen-Verb-Verbindung": "Erwartungen erfüllen",
+    "Bedeutung": "Erwartungen gerecht werden",
+    "Exemplo": "Der Film konnte die hohen Erwartungen der Zuschauer erfüllen.",
+    "Nomen": "Erwartungen"
+  },
+  {
+    "Nomen-Verb-Verbindung": "im Fokus stehen",
+    "Bedeutung": "zentral sein",
+    "Exemplo": "Die Sicherheit steht bei diesem Projekt im Fokus.",
+    "Nomen": "Fokus"
+  },
+  {
+    "Nomen-Verb-Verbindung": "zur Folge haben",
+    "Bedeutung": "zu etw. führen",
+    "Exemplo": "Der Klimawandel hat ernsthafte Folgen für die Umwelt zur Folge.",
+    "Nomen": "Folge"
+  },
+  {
+    "Nomen-Verb-Verbindung": "außer Frage stehen",
+    "Bedeutung": "zweifellos so sein",
+    "Exemplo": "Die Bedeutung von Bildung steht außer Frage.",
+    "Nomen": "Frage"
+  },
+  {
+    "Nomen-Verb-Verbindung": "eine Frage stellen",
+    "Bedeutung": "fragen",
+    "Exemplo": "Im Kurs stellt der Lehrer viele Fragen.",
+    "Nomen": "Frage"
+  },
+  {
+    "Nomen-Verb-Verbindung": "in Frage kommen",
+    "Bedeutung": "möglich sein",
+    "Exemplo": "Eine Verschiebung des Termins kommt für uns nicht in Frage.",
+    "Nomen": "Frage"
+  },
+  {
+    "Nomen-Verb-Verbindung": "etw. (Akk.) in Frage stellen",
+    "Bedeutung": "etw. kritisch hinterfragen",
+    "Exemplo": "Die neuen Forschungsergebnisse stellen bisherige Theorien in Frage.",
+    "Nomen": "Frage"
+  },
+  {
+    "Nomen-Verb-Verbindung": "jdm. eine Freude machen",
+    "Bedeutung": "jdn. erfreuen",
+    "Exemplo": "Das Geschenk wird ihr sicher eine große Freude machen.",
+    "Nomen": "Freude"
+  },
+  {
+    "Nomen-Verb-Verbindung": "zu Gast sein",
+    "Bedeutung": "eingeladen sein",
+    "Exemplo": "Der berühmte Autor war gestern zu Gast in der Buchhandlung.",
+    "Nomen": "Gast"
+  },
+  {
+    "Nomen-Verb-Verbindung": "Geborgenheit geben",
+    "Bedeutung": "Sicherheit und Schutz geben",
+    "Exemplo": "Die Eltern wollen ihren Kindern Geborgenheit geben.",
+    "Nomen": "Geborgenheit"
+  },
+  {
+    "Nomen-Verb-Verbindung": "auf andere Gedanken kommen",
+    "Bedeutung": "sich ablenken",
+    "Exemplo": "Nach dem Stress hilft ein Spaziergang, auf andere Gedanken zu kommen.",
+    "Nomen": "Gedanken"
+  },
+  {
+    "Nomen-Verb-Verbindung": "sich über etw. (Akk.) Gedanken machen",
+    "Bedeutung": "über etw. nachdenken",
+    "Exemplo": "Er macht sich viele Gedanken über seine Zukunft.",
+    "Nomen": "Gedanken"
+  },
+  {
+    "Nomen-Verb-Verbindung": "jdn. in Gefahr bringen",
+    "Bedeutung": "jdm. / für jdn. gefährlich werden",
+    "Exemplo": "Unachtsames Verhalten kann andere in Gefahr bringen.",
+    "Nomen": "Gefahr"
+  },
+  {
+    "Nomen-Verb-Verbindung": "jdm. einen Gefallen tun",
+    "Bedeutung": "jdm. helfen",
+    "Exemplo": "Könntest du mir einen Gefallen tun und die Tür öffnen?",
+    "Nomen": "Gefallen"
+  },
+  {
+    "Nomen-Verb-Verbindung": "ein Gesetz verabschieden",
+    "Bedeutung": "beschließen",
+    "Exemplo": "Der Bundestag hat gestern ein neues Gesetz verabschiedet.",
+    "Nomen": "Gesetz"
+  },
+  {
+    "Nomen-Verb-Verbindung": "an seine Grenzen stoßen",
+    "Bedeutung": "einen Punkt erreichen, an dem man nicht weitermachen kann",
+    "Exemplo": "Im Marathontraining stößt jeder irgendwann an seine Grenzen.",
+    "Nomen": "Grenzen"
+  },
+  {
+    "Nomen-Verb-Verbindung": "seine Grenzen überwinden",
+    "Bedeutung": "erfolgreich über die eigenen Grenzen hinausgehen",
+    "Exemplo": "Durch Motivation gelingt es vielen, ihre Grenzen zu überwinden.",
+    "Nomen": "Grenzen"
+  },
+  {
+    "Nomen-Verb-Verbindung": "etw. (Akk.) im Griff haben",
+    "Bedeutung": "beherrschen / kontrollieren können",
+    "Exemplo": "Sie hat den Zeitplan für das Projekt fest im Griff.",
+    "Nomen": "Griff"
+  },
+  {
+    "Nomen-Verb-Verbindung": "etw. (Dat.) auf den Grund gehen",
+    "Bedeutung": "etw. (Akk.) genauer untersuchen",
+    "Exemplo": "Die Polizei will dem Verdacht jetzt auf den Grund gehen.",
+    "Nomen": "Grund"
+  },
+  {
+    "Nomen-Verb-Verbindung": "jdm. einen Heiratsantrag machen",
+    "Bedeutung": "jdn. bitten, sie / ihn zu heiraten",
+    "Exemplo": "Er machte ihr am Strand einen romantischen Heiratsantrag.",
+    "Nomen": "Heiratsantrag"
+  },
+  {
+    "Nomen-Verb-Verbindung": "jdn. vor Herausforderungen stellen",
+    "Bedeutung": "jdn. herausfordern / jdm. Schwierigkeiten machen",
+    "Exemplo": "Der neue Job stellt sie vor große Herausforderungen.",
+    "Nomen": "Herausforderungen"
+  },
+  {
+    "Nomen-Verb-Verbindung": "jdm. bei etwas Hilfe leisten",
+    "Bedeutung": "jdm. bei etw. helfen",
+    "Exemplo": "Freiwillige leisten in der Organisation wertvolle Hilfe.",
+    "Nomen": "Hilfe"
+  },
+  {
+    "Nomen-Verb-Verbindung": "auf eine Idee kommen",
+    "Bedeutung": "eine Idee haben",
+    "Exemplo": "Wie bist du denn auf diese Idee gekommen?",
+    "Nomen": "Idee"
+  },
+  {
+    "Nomen-Verb-Verbindung": "eine Idee umsetzen",
+    "Bedeutung": "realisieren",
+    "Exemplo": "Die Firma setzt ihre Ideen schnell in die Praxis um.",
+    "Nomen": "Ideen"
+  },
+  {
+    "Nomen-Verb-Verbindung": "etw. (Akk.) in Kauf nehmen",
+    "Bedeutung": "etw. bewusst riskieren",
+    "Exemplo": "Er nahm das Risiko eines Jobwechsels in Kauf.",
+    "Nomen": "Kauf"
+  },
+  {
+    "Nomen-Verb-Verbindung": "zu jdm. / etw. in Konkurrenz stehen",
+    "Bedeutung": "mit jdm. / etw. konkurrieren",
+    "Exemplo": "Das Start-up steht in Konkurrenz zu großen Konzernen.",
+    "Nomen": "Konkurrenz"
+  },
+  {
+    "Nomen-Verb-Verbindung": "eine Konkurrenzanalyse machen",
+    "Bedeutung": "die Konkurrenz analysieren",
+    "Exemplo": "Vor der Markteinführung machen viele Unternehmen eine Konkurrenzanalyse.",
+    "Nomen": "Konkurrenzanalyse"
+  },
+  {
+    "Nomen-Verb-Verbindung": "zu jdm. Kontakt aufnehmen",
+    "Bedeutung": "jdn. kontaktieren",
+    "Exemplo": "Sie hat Kontakt zu einem Experten aufgenommen.",
+    "Nomen": "Kontakt"
+  },
+  {
+    "Nomen-Verb-Verbindung": "zu jdm. Kontakt knüpfen",
+    "Bedeutung": "Kontakt herstellen",
+    "Exemplo": "Auf der Konferenz konnte ich viele neue Kontakte knüpfen.",
+    "Nomen": "Kontakte"
+  },
+  {
+    "Nomen-Verb-Verbindung": "etw. (Akk.) unter Kontrolle haben",
+    "Bedeutung": "kontrollieren können",
+    "Exemplo": "Der Chef hat die Lage jederzeit unter Kontrolle.",
+    "Nomen": "Kontrolle"
+  },
+  {
+    "Nomen-Verb-Verbindung": "etw. (Akk.) auf den Kopf stellen",
+    "Bedeutung": "etw. durcheinanderbringen",
+    "Exemplo": "Das neue Gesetz hat die Branche komplett auf den Kopf gestellt.",
+    "Nomen": "Kopf"
+  },
+  {
+    "Nomen-Verb-Verbindung": "an jdm. / etw. Kritik üben",
+    "Bedeutung": "jdn. / etw. kritisieren",
+    "Exemplo": "Viele Experten übten Kritik an der Entscheidung der Regierung.",
+    "Nomen": "Kritik"
+  },
+  {
+    "Nomen-Verb-Verbindung": "in der Lage sein",
+    "Bedeutung": "die Fähigkeit / Möglichkeit haben",
+    "Exemplo": "Sie ist nicht in der Lage, die Arbeit rechtzeitig zu erledigen.",
+    "Nomen": "Lage"
+  },
+  {
+    "Nomen-Verb-Verbindung": "Leistung bringen",
+    "Bedeutung": "leisten",
+    "Exemplo": "Der Athlet bringt bei Wettkämpfen immer gute Leistungen.",
+    "Nomen": "Leistung"
+  },
+  {
+    "Nomen-Verb-Verbindung": "die Leitung übernehmen",
+    "Bedeutung": "leiten",
+    "Exemplo": "Er hat die Leitung des Projekts übernommen.",
+    "Nomen": "Leitung"
+  },
+  {
+    "Nomen-Verb-Verbindung": "(nicht) über die Lippen kommen",
+    "Bedeutung": "sich (nicht) trauen, etwas zu sagen",
+    "Exemplo": "Manchmal kommen einem die richtigen Worte einfach nicht über die Lippen.",
+    "Nomen": "Lippen"
+  },
+  {
+    "Nomen-Verb-Verbindung": "auf jdn. Macht ausüben",
+    "Bedeutung": "Macht nutzen",
+    "Exemplo": "Der Vorstand übt großen Einfluss auf die Unternehmenspolitik aus.",
+    "Nomen": "Macht"
+  },
+  {
+    "Nomen-Verb-Verbindung": "im Mittelpunkt stehen",
+    "Bedeutung": "zentral sein",
+    "Exemplo": "Bei der Diskussion steht der Klimaschutz im Mittelpunkt.",
+    "Nomen": "Mittelpunkt"
+  },
+  {
+    "Nomen-Verb-Verbindung": "(all) seinen Mut zusammennehmen",
+    "Bedeutung": "sich trauen",
+    "Exemplo": "Sie nahm all ihren Mut zusammen und sprach vor der großen Gruppe.",
+    "Nomen": "Mut"
+  },
+  {
+    "Nomen-Verb-Verbindung": "eine Niederlage einstecken",
+    "Bedeutung": "verlieren",
+    "Exemplo": "Die Mannschaft musste eine schmerzhafte Niederlage einstecken.",
+    "Nomen": "Niederlage"
+  },
+  {
+    "Nomen-Verb-Verbindung": "jdn. auf die Palme bringen",
+    "Bedeutung": "jdn. wütend machen",
+    "Exemplo": "Unpünktlichkeit bringt mich schnell auf die Palme.",
+    "Nomen": "Palme"
+  },
+  {
+    "Nomen-Verb-Verbindung": "etw. (Akk.) in die Praxis umsetzen",
+    "Bedeutung": "ein Vorhaben realisieren",
+    "Exemplo": "Die Firma setzt viele ihrer Ideen erfolgreich in die Praxis um.",
+    "Nomen": "Praxis"
+  },
+  {
+    "Nomen-Verb-Verbindung": "Rat wissen",
+    "Bedeutung": "einen Ausweg kennen",
+    "Exemplo": "In schwierigen Situationen weiß er immer Rat.",
+    "Nomen": "Rat"
+  },
+  {
+    "Nomen-Verb-Verbindung": "ein Referat halten",
+    "Bedeutung": "präsentieren",
+    "Exemplo": "Sie hält nächste Woche ein Referat über erneuerbare Energien.",
+    "Nomen": "Referat"
+  },
+  {
+    "Nomen-Verb-Verbindung": "Respekt zeigen",
+    "Bedeutung": "sich respektvoll verhalten",
+    "Exemplo": "Man sollte immer Respekt gegenüber anderen zeigen.",
+    "Nomen": "Respekt"
+  },
+  {
+    "Nomen-Verb-Verbindung": "Reue zeigen",
+    "Bedeutung": "etw. bereuen",
+    "Exemplo": "Nach dem Fehler zeigte er deutlich Reue.",
+    "Nomen": "Reue"
+  },
+  {
+    "Nomen-Verb-Verbindung": "ein Risiko eingehen",
+    "Bedeutung": "viel riskieren",
+    "Exemplo": "Investoren gehen manchmal hohe Risiken ein.",
+    "Nomen": "Risiko"
+  },
+  {
+    "Nomen-Verb-Verbindung": "eine Rolle spielen",
+    "Bedeutung": "relevant sein",
+    "Exemplo": "Gute Kommunikation spielt in der Teamarbeit eine wichtige Rolle.",
+    "Nomen": "Rolle"
+  },
+  {
+    "Nomen-Verb-Verbindung": "auf jdn. / etw. Rücksicht nehmen",
+    "Bedeutung": "jdn. / etw. berücksichtigen",
+    "Exemplo": "Man sollte immer Rücksicht auf ältere Menschen nehmen.",
+    "Nomen": "Rücksicht"
+  },
+  {
+    "Nomen-Verb-Verbindung": "einen Schluss ziehen",
+    "Bedeutung": "eine Schlussfolgerung ziehen, schlussfolgern",
+    "Exemplo": "Nach der Analyse zog sie einen wichtigen Schluss.",
+    "Nomen": "Schluss"
+  },
+  {
+    "Nomen-Verb-Verbindung": "jdn. in eine Schublade stecken",
+    "Bedeutung": "Vorurteile haben; jemanden einer Kategorie zuordnen",
+    "Exemplo": "Man sollte Menschen nicht vorschnell in eine Schublade stecken.",
+    "Nomen": "Schublade"
+  },
+  {
+    "Nomen-Verb-Verbindung": "in Schwierigkeiten geraten",
+    "Bedeutung": "Probleme bekommen",
+    "Exemplo": "Das Unternehmen geriet aufgrund der Krise in Schwierigkeiten.",
+    "Nomen": "Schwierigkeiten"
+  },
+  {
+    "Nomen-Verb-Verbindung": "sich um jdn. / etw. Sorgen machen",
+    "Bedeutung": "sich um jdn. / etw. sorgen",
+    "Exemplo": "Eltern machen sich oft Sorgen um ihre Kinder.",
+    "Nomen": "Sorgen"
+  },
+  {
+    "Nomen-Verb-Verbindung": "zu etw. (Dat.) Stellung nehmen",
+    "Bedeutung": "über etw. (Akk.) seine Meinung äußern",
+    "Exemplo": "Die Regierung nahm zu den Vorwürfen Stellung.",
+    "Nomen": "Stellung"
+  },
+  {
+    "Nomen-Verb-Verbindung": "eine Straftat begehen",
+    "Bedeutung": "etw. tun, wofür man vor Gericht gestellt wird",
+    "Exemplo": "Er wurde verurteilt, weil er eine Straftat begangen hatte.",
+    "Nomen": "Straftat"
+  },
+  {
+    "Nomen-Verb-Verbindung": "der Überzeugung sein",
+    "Bedeutung": "meinen",
+    "Exemplo": "Sie ist der Überzeugung, dass Ehrlichkeit wichtig ist.",
+    "Nomen": "Überzeugung"
+  },
+  {
+    "Nomen-Verb-Verbindung": "Umsatz machen",
+    "Bedeutung": "mit etw. Gewinn machen",
+    "Exemplo": "Das Unternehmen macht im letzten Quartal hohe Umsätze.",
+    "Nomen": "Umsatz"
+  },
+  {
+    "Nomen-Verb-Verbindung": "für jdn. / etw. Verantwortung tragen",
+    "Bedeutung": "verantwortlich sein",
+    "Exemplo": "Manager tragen Verantwortung für den Erfolg des Unternehmens.",
+    "Nomen": "Verantwortung"
+  },
+  {
+    "Nomen-Verb-Verbindung": "zur Verfügung stehen",
+    "Bedeutung": "da sein, vorhanden sein",
+    "Exemplo": "Dem Team stehen verschiedene Ressourcen zur Verfügung.",
+    "Nomen": "Verfügung"
+  },
+  {
+    "Nomen-Verb-Verbindung": "jdm. etw. (Akk.) zur Verfügung stellen",
+    "Bedeutung": "anbieten, bereitstellen",
+    "Exemplo": "Die Firma stellte den Mitarbeitern moderne Technik zur Verfügung.",
+    "Nomen": "Verfügung"
+  },
+  {
+    "Nomen-Verb-Verbindung": "für jdn. / etw. Verständnis haben",
+    "Bedeutung": "jdn. / etw. verstehen",
+    "Exemplo": "Die Kollegen hatten Verständnis für die schwierige Situation.",
+    "Nomen": "Verständnis"
+  },
+  {
+    "Nomen-Verb-Verbindung": "den Versuch unternehmen",
+    "Bedeutung": "etw. versuchen",
+    "Exemplo": "Sie unternahm den Versuch, die Probleme zu lösen.",
+    "Nomen": "Versuch"
+  },
+  {
+    "Nomen-Verb-Verbindung": "jdn. um Verzeihung bitten",
+    "Bedeutung": "sich höflich entschuldigen",
+    "Exemplo": "Er bat seine Kollegin um Verzeihung für den Fehler.",
+    "Nomen": "Verzeihung"
+  },
+  {
+    "Nomen-Verb-Verbindung": "im Vordergrund stehen",
+    "Bedeutung": "am wichtigsten sein",
+    "Exemplo": "Beim Projekt steht die Qualität im Vordergrund.",
+    "Nomen": "Vordergrund"
+  },
+  {
+    "Nomen-Verb-Verbindung": "jdm. Vorschriften machen",
+    "Bedeutung": "jdm. etw. vorschreiben",
+    "Exemplo": "Der Chef machte seinen Mitarbeitern viele Vorschriften.",
+    "Nomen": "Vorschriften"
+  },
+  {
+    "Nomen-Verb-Verbindung": "einen Vortrag halten",
+    "Bedeutung": "vortragen",
+    "Exemplo": "Die Professorin hält einen Vortrag über nachhaltige Entwicklung.",
+    "Nomen": "Vortrag"
+  },
+  {
+    "Nomen-Verb-Verbindung": "jdm. Vorwürfe machen",
+    "Bedeutung": "kritisieren",
+    "Exemplo": "Die Eltern machten ihrem Sohn Vorwürfe wegen der schlechten Noten.",
+    "Nomen": "Vorwürfe"
+  },
+  {
+    "Nomen-Verb-Verbindung": "etw. (Akk.) aus dem Weg räumen",
+    "Bedeutung": "etw. beseitigen",
+    "Exemplo": "Wir müssen alle Hindernisse aus dem Weg räumen, um erfolgreich zu sein.",
+    "Nomen": "Weg"
+  },
+  {
+    "Nomen-Verb-Verbindung": "auf etw. (Akk.) Wert legen",
+    "Bedeutung": "etw. für sehr wichtig halten",
+    "Exemplo": "Sie legt beim Kauf von Kleidung großen Wert auf Nachhaltigkeit.",
+    "Nomen": "Wert"
+  },
+  {
+    "Nomen-Verb-Verbindung": "gegen etw. Widerstand leisten",
+    "Bedeutung": "sich gegen etw. (Akk.) wehren",
+    "Exemplo": "Die Bürger leisteten Widerstand gegen die geplanten Veränderungen.",
+    "Nomen": "Widerstand"
+  },
+  {
+    "Nomen-Verb-Verbindung": "im Zentrum stehen",
+    "Bedeutung": "zentral sein",
+    "Exemplo": "Bei der Diskussion steht das Wohl der Kinder im Zentrum.",
+    "Nomen": "Zentrum"
+  }
+]

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Estudo de Alemão C1_1</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    /* Estilos específicos para navegação interna e layout */
+    body {
+      background: linear-gradient(to bottom right, #bfdbfe, #c4b5fd);
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+    #container {
+      max-width: 900px;
+      width: 100%;
+      background: white;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #4338ca;
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    nav button {
+      background: transparent;
+      border: 2px solid #4338ca;
+      color: #4338ca;
+      padding: 0.5rem 1.5rem;
+      font-weight: 600;
+      border-radius: 0.75rem;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    nav button.active,
+    nav button:hover {
+      background-color: #4338ca;
+      color: white;
+    }
+    #content {
+      min-height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container" role="main" aria-label="Conteúdo da seção C1_1">
+    <header>
+      <h1>Seção C1_1: Estudo Avançado de Alemão</h1>
+    </header>
+
+    <nav aria-label="Menu da seção C1_1">
+      <button data-page="gramatica" class="active">Gramática</button>
+      <button data-page="woerter">Wörter</button>
+      <button data-page="kommunikation">Kommunikation</button>
+    </nav>
+
+    <section id="content" aria-live="polite" aria-atomic="true">
+      <!-- Conteúdo carregado dinamicamente aqui -->
+      <p>Carregando conteúdo...</p>
+    </section>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+[
+  {
+    "adjetivo": "abhängig",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "adjetivo": "angebunden",
+    "preposicao": "an",
+    "caso": "Akkusativ"
+  },
+  {
+    "adjetivo": "angewiesen",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "adjetivo": "aufgeschlossen",
+    "preposicao": "gegenüber",
+    "caso": "Dativ"
+  },
+  {
+    "adjetivo": "beeindruckt",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "adjetivo": "befreit",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "adjetivo": "begeistert",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "adjetivo": "bekannt",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "adjetivo": "beliebt",
+    "preposicao": "bei",
+    "caso": "Dativ"
+  },
+  {
+    "adjetivo": "bereit",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "adjetivo": "beteiligt",
+    "preposicao": "an",
+    "caso": "Dativ"
+  },
+  {
+    "adjetivo": "böse",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "adjetivo": "dankbar",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "adjetivo": "einverstanden",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "adjetivo": "enttäuscht",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "adjetivo": "erstaunt",
+    "preposicao": "über",
+    "caso": "Akkusativ"
+  },
+  {
+    "adjetivo": "fertig",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "adjetivo": "geeignet",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "adjetivo": "gespannt",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "adjetivo": "gewöhnt",
+    "preposicao": "an",
+    "caso": "Akkusativ"
+  },
+  {
+    "adjetivo": "interessiert",
+    "preposicao": "an",
+    "caso": "Dativ"
+  },
+  {
+    "adjetivo": "neugierig",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "adjetivo": "offen",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "adjetivo": "sauer",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "adjetivo": "stolz",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "adjetivo": "süchtig",
+    "preposicao": "nach",
+    "caso": "Dativ"
+  },
+  {
+    "adjetivo": "typisch",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "adjetivo": "überzeugt",
+    "preposicao": "von",
+    "caso": "Dativ"
+  },
+  {
+    "adjetivo": "unempfindlich",
+    "preposicao": "gegen",
+    "caso": "Akkusativ"
+  },
+  {
+    "adjetivo": "verabredet",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "adjetivo": "verantwortlich",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "adjetivo": "verbunden",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "adjetivo": "verheiratet",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "adjetivo": "verliebt",
+    "preposicao": "in",
+    "caso": "Akkusativ"
+  },
+  {
+    "adjetivo": "vertraut",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "adjetivo": "verwandt",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "adjetivo": "wichtig",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  },
+  {
+    "adjetivo": "zufrieden",
+    "preposicao": "mit",
+    "caso": "Dativ"
+  },
+  {
+    "adjetivo": "zugeschnitten",
+    "preposicao": "auf",
+    "caso": "Akkusativ"
+  },
+  {
+    "adjetivo": "zuständig",
+    "preposicao": "für",
+    "caso": "Akkusativ"
+  }
+]
