@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Vocabulário Alemão</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Font Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for table hover effect and striped rows */
+        .striped-table tbody tr:nth-child(odd) {
+            background-color: #f8fafc; /* bg-slate-50 */
+        }
+        .striped-table tbody tr:hover {
+            background-color: #e0f2fe; /* bg-sky-100 */
+        }
+        /* Style for sortable header */
+        .sortable-header {
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .sort-icon {
+            margin-left: 0.5rem;
+            font-size: 0.8em;
+            color: #64748b; /* slate-500 */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-purple-100 min-h-screen flex flex-col items-center py-8 px-4">
+    <div class="max-w-5xl w-full bg-white rounded-2xl shadow-2xl p-6 md:p-10">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-center text-gray-800 mb-8">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+                Vocabulário Alemão
+            </span>
+        </h1>
+
+        <div class="mb-6 flex flex-col sm:flex-row items-center gap-4">
+            <input type="text" id="searchInput" placeholder="Pesquisar vocabulário..."
+                   class="flex-grow px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-gray-700">
+            <button id="clearSearchButton" class="px-5 py-2 bg-gray-200 text-gray-700 font-semibold rounded-lg shadow-sm hover:bg-gray-300 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-400">
+                Limpar Pesquisa
+            </button>
+            <button id="originalOrderButton" class="px-5 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-sm hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500">
+                Ordem Original
+            </button>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl shadow-lg border border-gray-200">
+            <table class="min-w-full divide-y divide-gray-200 striped-table">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider sortable-header" data-column="german">
+                            Alemão
+                            <span class="sort-icon" id="german-sort-icon"></span>
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider sortable-header" data-column="portuguese">
+                            Português
+                            <span class="sort-icon" id="portuguese-sort-icon"></span>
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider sortable-header" data-column="english">
+                            Inglês
+                            <span class="sort-icon" id="english-sort-icon"></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="vocabularyTableBody" class="bg-white divide-y divide-gray-200">
+                    <!-- Table rows will be injected here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Array de objetos contendo o vocabulário
+        const vocabulary = [
+            { german: "der Mauerfall", portuguese: "queda do Muro de Berlim", english: "fall of the Berlin Wall" },
+            { german: "die Teilung", portuguese: "divisão", english: "division" },
+            { german: "die Wiedervereinigung", portuguese: "reunificação", english: "reunification" },
+            { german: "der/die Verbündete", portuguese: "aliado(a)", english: "ally" },
+            { german: "kapitalistisch", portuguese: "capitalista", english: "capitalist" },
+            { german: "(sich) zuwenden", portuguese: "voltar-se para, dedicar-se a", english: "turn to, devote oneself to" },
+            { german: "sozialistisch", portuguese: "socialista", english: "socialist" },
+            { german: "der Ostblock", portuguese: "bloco oriental (países socialistas da Europa Oriental)", english: "Eastern Bloc" },
+            { german: "geografisch", portuguese: "geográfico", english: "geographical" },
+            { german: "Ostdeutschland", portuguese: "Alemanha Oriental", english: "East Germany" },
+            { german: "der Lebensstandard", portuguese: "padrão de vida", english: "standard of living" },
+            { german: "innerdeutsch", portuguese: "interno à Alemanha", english: "intra-German" },
+            { german: "der Stacheldraht", portuguese: "arame farpado", english: "barbed wire" },
+            { german: "die Mine", portuguese: "mina (explosivo)", english: "landmine" },
+            { german: "abriegeln", portuguese: "isolar, fechar fronteira", english: "seal off, cordon off" },
+            { german: "die Lebensgefahr", portuguese: "risco de vida", english: "mortal danger" },
+            { german: "massiv", portuguese: "maciço, intenso", english: "massive" },
+            { german: "die Auswanderung", portuguese: "emigração", english: "emigration" },
+            { german: "konkurrierend", portuguese: "concorrente", english: "competing" },
+            { german: "andauernd", portuguese: "contínuo, permanente", english: "ongoing" },
+            { german: "militärisch", portuguese: "militar", english: "military" },
+            { german: "die Konfrontation", portuguese: "confronto", english: "confrontation" },
+            { german: "der Wettkampf", portuguese: "competição", english: "competition" },
+            { german: "der Zusammenbruch", portuguese: "colapso", english: "collapse" },
+            { german: "Westdeutschland", portuguese: "Alemanha Ocidental", english: "West Germany" },
+            { german: "informell", portuguese: "informal", english: "informal" },
+            { german: "die Bezeichnung", portuguese: "designação, denominação", english: "designation" },
+            { german: "teilweise", portuguese: "parcialmente", english: "partially" },
+            { german: "das Grundrecht", portuguese: "direito fundamental", english: "basic right" },
+            { german: "verabschieden (ein Gesetz)", portuguese: "aproveitar (uma lei)", english: "adopt, pass (a law)" },
+            { german: "die Ausreise", portuguese: "saída do país", english: "departure, exit" },
+            { german: "die Pressekonferenz", portuguese: "coletiva de imprensa", english: "press conference" },
+            { german: "verkünden", portuguese: "anunciar", english: "announce" },
+            { german: "die Grenze zu + Dat.", portuguese: "fronteira com", english: "border with" },
+            { german: "einreißen", portuguese: "derrubar, demolir", english: "tear down" },
+            { german: "die Wende", portuguese: "virada (política, histórica)", english: "turning point" },
+            { german: "der Wandel", portuguese: "mudança", english: "change" },
+            { german: "vereinigen", portuguese: "unificar", english: "unify" },
+            { german: "spürbar", portuguese: "perceptível", english: "noticeable" },
+            { german: "im Hinblick auf + Akk.", portuguese: "com relação a", english: "with regard to" },
+            { german: "die Wirtschaftskraft", portuguese: "força econômica", english: "economic power" },
+            { german: "der Wohlstand", portuguese: "prosperidade", english: "prosperity" },
+            { german: "der Zeitraum", portuguese: "período", english: "period of time" },
+            { german: "abfällig", portuguese: "depreciativo", english: "derogatory" },
+            { german: "die Selbstbezeichnung", portuguese: "autodenominação", english: "self-designation" },
+            { german: "wohnhaft", portuguese: "residente", english: "resident" },
+            { german: "ansteigen", portuguese: "aumentar, subir", english: "increase, rise" },
+            { german: "repräsentieren", portuguese: "representar", english: "represent" },
+            { german: "unterrepräsentiert", portuguese: "sub-representado", english: "underrepresented" },
+            { german: "die Aussicht auf + Akk.", portuguese: "perspectiva de", english: "prospect of" },
+            { german: "die Ungleichheit", portuguese: "desigualdade", english: "inequality" },
+            { german: "die Debatte über + Akk.", portuguese: "debate sobre", english: "debate about" },
+            { german: "der/die Zugewanderte", portuguese: "imigrante", english: "immigrant" },
+            { german: "die Herausforderung", portuguese: "desafio", english: "challenge" },
+            { german: "das Verfassungsgericht", portuguese: "tribunal constitucional", english: "constitutional court" },
+            { german: "die Lebenshaltungskosten", portuguese: "custo de vida", english: "cost of living" },
+            { german: "schildern", portuguese: "descrever, relatar", english: "describe" },
+            { german: "beklagen", portuguese: "lamentar, queixar-se", english: "complain" },
+            { german: "erheblich", portuguese: "considerável", english: "considerable" },
+            { german: "rundum", portuguese: "completamente", english: "completely" },
+            { german: "sichtlich", portuguese: "visivelmente", english: "visibly" },
+            { german: "erschüttern", portuguese: "abalar, chocar", english: "shake, shock" },
+            { german: "gefährden", portuguese: "pôr em risco", english: "endanger" },
+            { german: "potenziell", portuguese: "potencial", english: "potential" },
+            { german: "die Pandemie", portuguese: "pandemia", english: "pandemic" },
+            { german: "verbreiten", portuguese: "espalhar", english: "spread" },
+            { german: "der Berufswechsel", portuguese: "mudança de profissão", english: "career change" },
+            { german: "das Auslandssemester", portuguese: "semestre no exterior", english: "semester abroad" },
+            { german: "schicksalhaft", portuguese: "fatídico, decisivo", english: "fateful" },
+            { german: "sich vollziehen", portuguese: "realizar-se, ocorrer", english: "take place" },
+            { german: "wenden", portuguese: "virar, mudar", english: "turn" },
+            { german: "die Wendung", portuguese: "mudança, virada", english: "turn, twist" },
+            { german: "etwas auf den Kopf stellen", portuguese: "virar algo de cabeça para baixo", english: "turn something upside down" },
+            { german: "grundlegend", portuguese: "fundamental, básico", english: "fundamental" }
+        ];
+
+        let currentVocabulary = [...vocabulary]; // Copies the original vocabulary for manipulation
+        let sortColumn = null;
+        let sortDirection = 'asc'; // 'asc' for ascending, 'desc' for descending
+
+        const vocabularyTableBody = document.getElementById('vocabularyTableBody');
+        const searchInput = document.getElementById('searchInput');
+        const clearSearchButton = document.getElementById('clearSearchButton');
+        const originalOrderButton = document.getElementById('originalOrderButton');
+        const sortableHeaders = document.querySelectorAll('.sortable-header');
+
+        // Function to render the table rows
+        function renderVocabularyTable(vocabData) {
+            vocabularyTableBody.innerHTML = ''; // Clear existing rows
+            vocabData.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${item.german}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">${item.portuguese}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">${item.english}</td>
+                `;
+                vocabularyTableBody.appendChild(row);
+            });
+        }
+
+        // Function to filter vocabulary based on search input
+        function filterVocabulary() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const filteredVocab = vocabulary.filter(item => // Always filter from the original vocabulary
+                item.german.toLowerCase().includes(searchTerm) ||
+                item.portuguese.toLowerCase().includes(searchTerm) ||
+                item.english.toLowerCase().includes(searchTerm)
+            );
+            currentVocabulary = filteredVocab; // Update current vocabulary with filtered results
+            sortVocabulary(); // Re-sort the filtered data
+        }
+
+        // Function to sort vocabulary
+        function sortVocabulary() {
+            if (!sortColumn) {
+                renderVocabularyTable(currentVocabulary); // If no sort column, just render
+                return;
+            }
+
+            const sortedVocab = [...currentVocabulary].sort((a, b) => {
+                const valA = a[sortColumn].toLowerCase();
+                const valB = b[sortColumn].toLowerCase();
+
+                if (valA < valB) {
+                    return sortDirection === 'asc' ? -1 : 1;
+                }
+                if (valA > valB) {
+                    return sortDirection === 'asc' ? 1 : -1;
+                }
+                return 0;
+            });
+            renderVocabularyTable(sortedVocab);
+            updateSortIcons();
+        }
+
+        // Function to update sort icons in table headers
+        function updateSortIcons() {
+            sortableHeaders.forEach(header => {
+                const column = header.dataset.column;
+                const iconSpan = document.getElementById(`${column}-sort-icon`);
+                if (iconSpan) {
+                    iconSpan.innerHTML = ''; // Clear previous icon
+                    if (column === sortColumn) {
+                        iconSpan.innerHTML = sortDirection === 'asc' ? '&#9650;' : '&#9660;'; // Up or Down arrow
+                    }
+                }
+            });
+        }
+
+        // Event listener for search input
+        searchInput.addEventListener('input', filterVocabulary);
+
+        // Event listener for clear search button
+        clearSearchButton.addEventListener('click', () => {
+            searchInput.value = '';
+            filterVocabulary(); // Re-filter to show all items
+        });
+
+        // Event listener for original order button
+        originalOrderButton.addEventListener('click', () => {
+            currentVocabulary = [...vocabulary]; // Restore the original vocabulary
+            sortColumn = null; // Reset sort column
+            sortDirection = 'asc'; // Reset sort direction
+            searchInput.value = ''; // Clear search input
+            renderVocabularyTable(currentVocabulary); // Render with original order
+            updateSortIcons(); // Clear sort icons
+        });
+
+        // Event listeners for sortable headers
+        sortableHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const column = header.dataset.column;
+                if (sortColumn === column) {
+                    sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+                } else {
+                    sortColumn = column;
+                    sortDirection = 'asc';
+                }
+                // Apply filter first if there's a search term, then sort
+                if (searchInput.value) {
+                    filterVocabulary();
+                } else {
+                    sortVocabulary();
+                }
+            });
+        });
+
+        // Initial render of the table
+        document.addEventListener('DOMContentLoaded', () => {
+            renderVocabularyTable(currentVocabulary);
+        });
+    </script>
+</body>
+</html>
