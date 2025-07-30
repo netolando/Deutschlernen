@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela de Vocabulário Alemão</title>
+    <title>Estudo de Alemão: Vocabulário e Gramática</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -31,54 +31,107 @@
             font-size: 0.8em;
             color: #64748b; /* slate-500 */
         }
+        /* Highlight style for grammar elements */
+        .grammar-highlight {
+            background-color: #fef08a; /* yellow-200 */
+            color: #991b1b; /* red-800 */
+            font-weight: 600; /* font-semibold */
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.25rem;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-blue-100 to-purple-100 min-h-screen flex flex-col items-center py-8 px-4">
-    <div class="max-w-5xl w-full bg-white rounded-2xl shadow-2xl p-6 md:p-10">
+    <div class="max-w-6xl w-full bg-white rounded-2xl shadow-2xl p-6 md:p-10">
         <h1 class="text-4xl md:text-5xl font-extrabold text-center text-gray-800 mb-8">
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-                Vocabulário Alemão
+                Estudo de Alemão
             </span>
         </h1>
 
-        <div class="mb-6 flex flex-col sm:flex-row items-center gap-4">
-            <input type="text" id="searchInput" placeholder="Pesquisar vocabulário..."
-                   class="flex-grow px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-gray-700">
-            <button id="clearSearchButton" class="px-5 py-2 bg-gray-200 text-gray-700 font-semibold rounded-lg shadow-sm hover:bg-gray-300 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-400">
-                Limpar Pesquisa
+        <!-- Navigation Tabs -->
+        <div class="flex justify-center mb-8 border-b border-gray-200">
+            <button id="vocabTab" class="px-6 py-3 text-lg font-medium text-gray-700 border-b-2 border-transparent hover:border-indigo-500 hover:text-indigo-600 focus:outline-none transition duration-300 ease-in-out">
+                Vocabulário
             </button>
-            <button id="originalOrderButton" class="px-5 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-sm hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500">
-                Ordem Original
+            <button id="grammarTab" class="px-6 py-3 text-lg font-medium text-gray-700 border-b-2 border-transparent hover:border-indigo-500 hover:text-indigo-600 focus:outline-none transition duration-300 ease-in-out">
+                Gramática
             </button>
         </div>
 
-        <div class="overflow-x-auto rounded-xl shadow-lg border border-gray-200">
-            <table class="min-w-full divide-y divide-gray-200 striped-table">
-                <thead class="bg-gray-50">
-                    <tr>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider sortable-header" data-column="german">
-                            Alemão
-                            <span class="sort-icon" id="german-sort-icon"></span>
-                        </th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider sortable-header" data-column="portuguese">
-                            Português
-                            <span class="sort-icon" id="portuguese-sort-icon"></span>
-                        </th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider sortable-header" data-column="english">
-                            Inglês
-                            <span class="sort-icon" id="english-sort-icon"></span>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody id="vocabularyTableBody" class="bg-white divide-y divide-gray-200">
-                    <!-- Table rows will be injected here by JavaScript -->
-                </tbody>
-            </table>
+        <!-- Vocabulary Section -->
+        <div id="vocabularySection" class="tab-content">
+            <h2 class="text-3xl font-bold text-center text-gray-700 mb-6">Tabela de Vocabulário</h2>
+            <div class="mb-6 flex flex-col sm:flex-row items-center gap-4">
+                <input type="text" id="searchInput" placeholder="Pesquisar vocabulário..."
+                       class="flex-grow px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-gray-700">
+                <button id="clearSearchButton" class="px-5 py-2 bg-gray-200 text-gray-700 font-semibold rounded-lg shadow-sm hover:bg-gray-300 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-400">
+                    Limpar Pesquisa
+                </button>
+                <button id="originalOrderButton" class="px-5 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-sm hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    Ordem Original
+                </button>
+            </div>
+
+            <div class="overflow-x-auto rounded-xl shadow-lg border border-gray-200">
+                <table class="min-w-full divide-y divide-gray-200 striped-table">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider sortable-header" data-column="german">
+                                Alemão
+                                <span class="sort-icon" id="german-sort-icon"></span>
+                            </th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider sortable-header" data-column="portuguese">
+                                Português
+                                <span class="sort-icon" id="portuguese-sort-icon"></span>
+                            </th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider sortable-header" data-column="english">
+                                Inglês
+                                <span class="sort-icon" id="english-sort-icon"></span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="vocabularyTableBody" class="bg-white divide-y divide-gray-200">
+                        <!-- Table rows will be injected here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Grammar Section -->
+        <div id="grammarSection" class="tab-content hidden">
+            <h2 class="text-3xl font-bold text-center text-gray-700 mb-6">Guia de Gramática</h2>
+            <div id="grammarContentContainer">
+                <div class="flex flex-col md:flex-row gap-6">
+                    <!-- Grammar Navigation Sidebar -->
+                    <div class="md:w-1/4 bg-red-50 rounded-xl shadow-md p-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Tópicos</h3>
+                        <ul class="space-y-2">
+                            <li><button class="grammar-nav-btn text-left w-full px-4 py-2 rounded-lg text-gray-700 hover:bg-red-100 hover:text-red-700 transition duration-200" data-target="artikel-adjektiv">1. Artigos e Declinação de Adjetivos</button></li>
+                            <li><button class="grammar-nav-btn text-left w-full px-4 py-2 rounded-lg text-gray-700 hover:bg-red-100 hover:text-red-700 transition duration-200" data-target="praepositionen">2. Preposições</button></li>
+                            <li><button class="grammar-nav-btn text-left w-full px-4 py-2 rounded-lg text-gray-700 hover:bg-red-100 hover:text-red-700 transition duration-200" data-target="verben">3. Verbos</button></li>
+                            <li><button class="grammar-nav-btn text-left w-full px-4 py-2 rounded-lg text-gray-700 hover:bg-red-100 hover:text-red-700 transition duration-200" data-target="satzverbindungen">4. Conectores de Frases</button></li>
+                            <li><button class="grammar-nav-btn text-left w-full px-4 py-2 rounded-lg text-gray-700 hover:bg-red-100 hover:text-red-700 transition duration-200" data-target="stil">5. Estilo Verbal e Nominal</button></li>
+                        </ul>
+                    </div>
+
+                    <!-- Grammar Content Area -->
+                    <div class="md:w-3/4 bg-white rounded-xl shadow-md p-6">
+                        <input type="text" id="grammarSearchInput" placeholder="Pesquisar gramática..."
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent text-gray-700 mb-6">
+
+                        <div id="grammarContent">
+                            <!-- Content for each grammar section will be loaded here -->
+                            <p class="text-gray-600 text-center py-8">Selecione um tópico no menu lateral para começar a explorar a gramática.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
-        // Array de objetos contendo o vocabulário
+        // --- Vocabulary Data ---
         const vocabulary = [
             { german: "der Mauerfall", portuguese: "queda do Muro de Berlim", english: "fall of the Berlin Wall" },
             { german: "die Teilung", portuguese: "divisão", english: "division" },
@@ -157,14 +210,15 @@
         ];
 
         let currentVocabulary = [...vocabulary]; // Copies the original vocabulary for manipulation
-        let sortColumn = null;
-        let sortDirection = 'asc'; // 'asc' for ascending, 'desc' for descending
+        let vocabSortColumn = null;
+        let vocabSortDirection = 'asc'; // 'asc' for ascending, 'desc' for descending
 
         const vocabularyTableBody = document.getElementById('vocabularyTableBody');
         const searchInput = document.getElementById('searchInput');
         const clearSearchButton = document.getElementById('clearSearchButton');
         const originalOrderButton = document.getElementById('originalOrderButton');
-        const sortableHeaders = document.querySelectorAll('.sortable-header');
+        const vocabSortableHeaders = document.querySelectorAll('#vocabularySection .sortable-header');
+
 
         // Function to render the table rows
         function renderVocabularyTable(vocabData) {
@@ -194,36 +248,36 @@
 
         // Function to sort vocabulary
         function sortVocabulary() {
-            if (!sortColumn) {
+            if (!vocabSortColumn) {
                 renderVocabularyTable(currentVocabulary); // If no sort column, just render
                 return;
             }
 
             const sortedVocab = [...currentVocabulary].sort((a, b) => {
-                const valA = a[sortColumn].toLowerCase();
-                const valB = b[sortColumn].toLowerCase();
+                const valA = a[vocabSortColumn].toLowerCase();
+                const valB = b[vocabSortColumn].toLowerCase();
 
                 if (valA < valB) {
-                    return sortDirection === 'asc' ? -1 : 1;
+                    return vocabSortDirection === 'asc' ? -1 : 1;
                 }
                 if (valA > valB) {
-                    return sortDirection === 'asc' ? 1 : -1;
+                    return vocabSortDirection === 'asc' ? 1 : -1;
                 }
                 return 0;
             });
             renderVocabularyTable(sortedVocab);
-            updateSortIcons();
+            updateVocabSortIcons();
         }
 
         // Function to update sort icons in table headers
-        function updateSortIcons() {
-            sortableHeaders.forEach(header => {
+        function updateVocabSortIcons() {
+            vocabSortableHeaders.forEach(header => {
                 const column = header.dataset.column;
                 const iconSpan = document.getElementById(`${column}-sort-icon`);
                 if (iconSpan) {
                     iconSpan.innerHTML = ''; // Clear previous icon
-                    if (column === sortColumn) {
-                        iconSpan.innerHTML = sortDirection === 'asc' ? '&#9650;' : '&#9660;'; // Up or Down arrow
+                    if (column === vocabSortColumn) {
+                        iconSpan.innerHTML = vocabSortDirection === 'asc' ? '&#9650;' : '&#9660;'; // Up or Down arrow
                     }
                 }
             });
@@ -241,22 +295,22 @@
         // Event listener for original order button
         originalOrderButton.addEventListener('click', () => {
             currentVocabulary = [...vocabulary]; // Restore the original vocabulary
-            sortColumn = null; // Reset sort column
-            sortDirection = 'asc'; // Reset sort direction
+            vocabSortColumn = null; // Reset sort column
+            vocabSortDirection = 'asc'; // Reset sort direction
             searchInput.value = ''; // Clear search input
             renderVocabularyTable(currentVocabulary); // Render with original order
-            updateSortIcons(); // Clear sort icons
+            updateVocabSortIcons(); // Clear sort icons
         });
 
         // Event listeners for sortable headers
-        sortableHeaders.forEach(header => {
+        vocabSortableHeaders.forEach(header => {
             header.addEventListener('click', () => {
                 const column = header.dataset.column;
-                if (sortColumn === column) {
-                    sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+                if (vocabSortColumn === column) {
+                    vocabSortDirection = vocabSortDirection === 'asc' ? 'desc' : 'asc';
                 } else {
-                    sortColumn = column;
-                    sortDirection = 'asc';
+                    vocabSortColumn = column;
+                    vocabSortDirection = 'asc';
                 }
                 // Apply filter first if there's a search term, then sort
                 if (searchInput.value) {
@@ -267,9 +321,565 @@
             });
         });
 
-        // Initial render of the table
+        // --- Grammar Data (Moved from grammar.html and embedded directly) ---
+        const grammarData = {
+            "artikel-adjektiv": {
+                title: "1. Artigos e Declinação de Adjetivos",
+                content: `
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">1.1 Artigos</h4>
+                    <p class="text-gray-700 mb-4">Artigos definidos e indefinidos, bem como palavras que podem substituí-los.</p>
+                    <div class="overflow-x-auto rounded-lg shadow-md border border-gray-200 mb-6">
+                        <table class="min-w-full divide-y divide-gray-200 striped-table">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Exemplo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Artigo definido</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">das Auto</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Artigo indefinido</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">ein Auto</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Demonstrativo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">dieses/jenes/solches Auto</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Possessivo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">mein/dein/ihr/sein/unser/euer/ihr/Ihr Auto</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Indefinido</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">irgendein/jedes/kein/manches Auto; wenige Autos</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Interrogativo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">was für ein/welches Auto</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">1.2 Declinação de Adjetivos</h4>
+                    <p class="text-gray-700 mb-4">Regras de declinação para adjetivos.</p>
+                    <div class="overflow-x-auto rounded-lg shadow-md border border-gray-200 mb-6">
+                        <h5 class="text-lg font-medium text-gray-700 px-6 py-3 bg-gray-50">1.2.1 Singular Tipo I: Artigo Definido</h5>
+                        <table class="min-w-full divide-y divide-gray-200 striped-table">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Caso</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Masculino</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Neutro</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Feminino</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nominativo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">dieser <span class="grammar-highlight">milde</span> Abend</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">dieses <span class="grammar-highlight">unlösbare</span> Problem</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">diese <span class="grammar-highlight">innere</span> Ruhe</td></tr>
+                            <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Acusativo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">diesen <span class="grammar-highlight">milden</span> Abend</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">dieses <span class="grammar-highlight">unlösbare</span> Problem</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">diese <span class="grammar-highlight">innere</span> Ruhe</td></tr>
+                            <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dativo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">diesem <span class="grammar-highlight">milden</span> Abend</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">diesem <span class="grammar-highlight">unlösbaren</span> Problem</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">dieser <span class="grammar-highlight">inneren</span> Ruhe</td></tr>
+                            <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Genitivo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">dieses <span class="grammar-highlight">milden</span> Abends</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">dieses <span class="grammar-highlight">unlösbaren</span> Problems</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">dieser <span class="grammar-highlight">inneren</span> Ruhe</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50">Também após: jed-, jen-, manch-, solch-, welch-</p>
+                </div>
+                <div class="overflow-x-auto rounded-lg shadow-md border border-gray-200 mb-6">
+                    <h5 class="text-lg font-medium text-gray-700 px-6 py-3 bg-gray-50">1.2.2 Singular Tipo II: Artigo Indefinido / Artigo Negativo</h5>
+                    <table class="min-w-full divide-y divide-gray-200 striped-table">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Caso</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Masculino</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Neutro</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Feminino</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nominativo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">(k)ein <span class="grammar-highlight">neuer</span> Beruf</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">(k)ein <span class="grammar-highlight">konkretes</span> Beispiel</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">(k)eine <span class="grammar-highlight">interne</span> Sitzung</td></tr>
+                            <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Acusativo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">(k)einen <span class="grammar-highlight">neuen</span> Beruf</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">(k)ein <span class="grammar-highlight">konkretes</span> Beispiel</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">(k)eine <span class="grammar-highlight">interne</span> Sitzung</td></tr>
+                            <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dativo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">(k)einem <span class="grammar-highlight">neuen</span> Beruf</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">(k)einem <span class="grammar-highlight">konkreten</span> Beispiel</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">(k)einer <span class="grammar-highlight">internen</span> Sitzung</td></tr>
+                            <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Genitivo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">(k)eines <span class="grammar-highlight">neuen</span> Berufs</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">(k)eines <span class="grammar-highlight">konkreten</span> Beispiels</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">(k)einer <span class="grammar-highlight">internen</span> Sitzung</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50">Também após: mein-, dein-, ihr-, sein-, unser-, eu(e)r-, ihr-, Ihr-, irgendein-</p>
+                </div>
+                <div class="overflow-x-auto rounded-lg shadow-md border border-gray-200 mb-6">
+                    <h5 class="text-lg font-medium text-gray-700 px-6 py-3 bg-gray-50">1.2.3 Plural</h5>
+                    <table class="min-w-full divide-y divide-gray-200 striped-table">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Caso</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo I</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo II</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nominativo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">keine <span class="grammar-highlight">konkreten</span> Beispiele</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">einige <span class="grammar-highlight">konkrete</span> Beispiele</td></tr>
+                            <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Acusativo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">keine <span class="grammar-highlight">konkreten</span> Beispiele</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">einige <span class="grammar-highlight">konkrete</span> Beispiele</td></tr>
+                            <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dativo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">keinen <span class="grammar-highlight">konkreten</span> Beispielen</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">einigen <span class="grammar-highlight">konkreten</span> Beispielen</td></tr>
+                            <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Genitivo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">keiner <span class="grammar-highlight">konkreten</span> Beispiele</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">einiger <span class="grammar-highlight">konkreter</span> Beispiele</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50">Tipo I: Também após: jed-, jen-, manch-, solch-, welch-</p>
+                    <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50">Tipo II: Também após: beide*, einige, etliche, lauter, manche*, mehrere, sämtliche*, viele, wenige e números</p>
+                    <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50">*ambos os tipos I e II são possíveis</p>
+                </div>
+            `
+            },
+            "praepositionen": {
+                title: "2. Preposições",
+                content: `
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">2.1 Significado</h4>
+                    <h5 class="text-lg font-medium text-gray-700 mb-2">2.1.1 Preposições de Reprodução de Discurso</h5>
+                    <p class="text-gray-700 mb-4">As preposições <span class="grammar-highlight"><i>gemäß</i></span>, <span class="grammar-highlight"><i>laut</i></span>, <span class="grammar-highlight"><i>nach</i></span> e <span class="grammar-highlight"><i>zufolge</i></span> indicam uma fonte de informação e expressam neutralidade ou distância. O verbo está sempre no indicativo.</p>
+                    <div class="overflow-x-auto rounded-lg shadow-md border border-gray-200 mb-6">
+                        <table class="min-w-full divide-y divide-gray-200 striped-table">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Preposição</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Exemplo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">gemäß + Dativ (antes ou depois)</td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">Gemäß</span> dieser Definition / Dieser Definition <span class="grammar-highlight">gemäß</span> ist Mobilität eine Voraussetzung dafür, am gesellschaftlichen Leben teilzunehmen.</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">laut + Dativ (sempre antes)</td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">Laut</span> der Definition einer Berliner Stiftung geht es bei Mobilität um die Möglichkeit, von A nach B zu kommen [...].</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">nach + Dativ (antes ou depois)</td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">Nach</span> einer Erhebung von 2015 werden 92% des öffentlichen Raums für Parkflächen benötigt./Ersten Schätzungen <span class="grammar-highlight">nach</span> landen Leihroller schon nach wenigen Monaten auf dem Müll.</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">zufolge + Dativ (sempre depois)</td><td class="px-6 py-4 text-sm text-gray-700">Einer aktuellen Studie <span class="grammar-highlight">zufolge</span> sind 85% aller Menschen in Deutschland tagtäglich unterwegs.</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50">A preposição <i>gemäß</i> não é usada com pessoas.</p>
+                    </div>
+
+                    <h5 class="text-lg font-medium text-gray-700 mb-2">2.1.2 Outras Preposições e Expressões Preposicionais</h5>
+                    <div class="overflow-x-auto rounded-lg shadow-md border border-gray-200 mb-6">
+                        <table class="min-w-full divide-y divide-gray-200 striped-table">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Preposições</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Adversativo</td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">entgegen</span>, <span class="grammar-highlight">im Gegensatz zu</span></td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Final</td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">für</span>, <span class="grammar-highlight">zu</span></td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Causal</td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">angesichts</span>, <span class="grammar-highlight">anlässlich</span>, <span class="grammar-highlight">aufgrund</span>, <span class="grammar-highlight">aus</span>, <span class="grammar-highlight">dank</span>, <span class="grammar-highlight">mangels</span>, <span class="grammar-highlight">vor</span>, <span class="grammar-highlight">wegen</span></td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Condicional</td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">bei</span></td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Consecutivo</td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">infolge</span></td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Concessivo</td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">auch bei</span>, <span class="grammar-highlight">selbst bei</span>, <span class="grammar-highlight">trotz</span>, <span class="grammar-highlight">ungeachtet</span></td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Local</td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">an</span>, <span class="grammar-highlight">auf</span>, <span class="grammar-highlight">aus</span>, <span class="grammar-highlight">außerhalb</span>, <span class="grammar-highlight">bei</span>, <span class="grammar-highlight">bis zu</span>, <span class="grammar-highlight">durch</span>, <span class="grammar-highlight">entlang</span>, <span class="grammar-highlight">gegen</span>, <span class="grammar-highlight">hinter</span>, <span class="grammar-highlight">in</span>, <span class="grammar-highlight">innerhalb</span>, <span class="grammar-highlight">nach</span>, <span class="grammar-highlight">neben</span>, <span class="grammar-highlight">oberhalb</span>, <span class="grammar-highlight">über</span>, <span class="grammar-highlight">um... herum</span>, <span class="grammar-highlight">unter</span>, <span class="grammar-highlight">unterhalb</span>, <span class="grammar-highlight">von ... aus</span>, <span class="grammar-highlight">von ... bis</span>, <span class="grammar-highlight">vor</span>, <span class="grammar-highlight">zu</span>, <span class="grammar-highlight">zwischen</span></td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Modal</td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">auf</span>, <span class="grammar-highlight">aus</span>, <span class="grammar-highlight">außer</span>, <span class="grammar-highlight">durch</span>, <span class="grammar-highlight">in</span>, <span class="grammar-highlight">mit</span>, <span class="grammar-highlight">mithilfe</span>, <span class="grammar-highlight">mittels</span>, <span class="grammar-highlight">ohne</span>, <span class="grammar-highlight">statt</span></td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Temporal</td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">ab</span>, <span class="grammar-highlight">an</span>, <span class="grammar-highlight">bei</span>, <span class="grammar-highlight">bis</span>, <span class="grammar-highlight">bis zu</span>, <span class="grammar-highlight">in</span>, <span class="grammar-highlight">nach</span>, <span class="grammar-highlight">seit</span>, <span class="grammar-highlight">um</span>, <span class="grammar-highlight">von ... an</span>, <span class="grammar-highlight">von ... bis</span>, <span class="grammar-highlight">vor</span>, <span class="grammar-highlight">während</span>, <span class="grammar-highlight">zwischen</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">2.2 Caso</h4>
+                    <h5 class="text-lg font-medium text-gray-700 mb-2">2.2.1 Preposições com Caso Fixo</h5>
+                    <div class="overflow-x-auto rounded-lg shadow-md border border-gray-200 mb-6">
+                        <table class="min-w-full divide-y divide-gray-200 striped-table">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Caso</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Preposições</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">+ Acusativo</td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">bis</span>, <span class="grammar-highlight">durch</span>, <span class="grammar-highlight">für</span>, <span class="grammar-highlight">gegen</span>, <span class="grammar-highlight">ohne</span>, <span class="grammar-highlight">um</span></td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">+ Dativo</td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">ab</span>, <span class="grammar-highlight">aus</span>, <span class="grammar-highlight">außer</span>, <span class="grammar-highlight">bei</span>, <span class="grammar-highlight">dank</span>, <span class="grammar-highlight">entgegen</span>, <span class="grammar-highlight">gegenüber</span> (também depois), <span class="grammar-highlight">gemäß</span> (também depois), <span class="grammar-highlight">laut</span>, <span class="grammar-highlight">mit</span>, <span class="grammar-highlight">nach</span> (também depois), <span class="grammar-highlight">seit</span>, <span class="grammar-highlight">statt</span> (coloquial), <span class="grammar-highlight">von</span>, <span class="grammar-highlight">wegen</span> (coloquial), <span class="grammar-highlight">zu</span>, <span class="grammar-highlight">zufolge</span> (depois)</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">+ Genitivo</td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">angesichts</span>, <span class="grammar-highlight">anlässlich</span>, <span class="grammar-highlight">aufgrund</span>, <span class="grammar-highlight">außerhalb</span>, <span class="grammar-highlight">dank</span>, <span class="grammar-highlight">entlang</span>, <span class="grammar-highlight">infolge</span>, <span class="grammar-highlight">innerhalb</span>, <span class="grammar-highlight">laut</span> (raro), <span class="grammar-highlight">mangels</span>, <span class="grammar-highlight">mithilfe</span>, <span class="grammar-highlight">mittels</span>, <span class="grammar-highlight">oberhalb</span>, <span class="grammar-highlight">statt</span>, <span class="grammar-highlight">trotz</span>, <span class="grammar-highlight">ungeachtet</span>, <span class="grammar-highlight">unterhalb</span>, <span class="grammar-highlight">während</span>, <span class="grammar-highlight">wegen</span></td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50">Quando um substantivo sem artigo e sem adjetivo segue uma preposição com Genitivo, usa-se a preposição correspondente junto com <i>von + Dativ</i> (ex: <i>innerhalb von Städten</i>).</p>
+                    </div>
+                `
+            },
+            "verben": {
+                title: "3. Verbos",
+                content: `
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">3.1 Discurso Indireto com Konjunktiv I e II: Passivo</h4>
+                    <h5 class="text-lg font-medium text-gray-700 mb-2">3.1.1 Presente</h5>
+                    <div class="overflow-x-auto rounded-lg shadow-md border border-gray-200 mb-6">
+                        <table class="min-w-full divide-y divide-gray-200 striped-table">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Forma</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Exemplo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"><span class="grammar-highlight">werde/würden*</span> + Partizip Perfekt</td><td class="px-6 py-4 text-sm text-gray-700">Ein Shuttle-Bus <span class="grammar-highlight">werde</span> nächstes Jahr eingerichtet, heißt es aus der Gemeinde.<br>Birte Arnolds findet, die Bedürfnisse der Menschen auf dem Land <span class="grammar-highlight">würden</span> oft übersehen.</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50">*Como a forma do Konjunktiv I no plural é idêntica à forma do Indicativo, usa-se o Konjunktiv II.</p>
+                    </div>
+                    <h5 class="text-lg font-medium text-gray-700 mb-2">3.1.2 Passado</h5>
+                    <div class="overflow-x-auto rounded-lg shadow-md border border-gray-200 mb-6">
+                        <table class="min-w-full divide-y divide-gray-200 striped-table">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Forma</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Exemplo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"><span class="grammar-highlight">sei/seien</span> + Partizip Perfekt + <span class="grammar-highlight">worden</span></td><td class="px-6 py-4 text-sm text-gray-700">Mit solchen Maßnahmen <span class="grammar-highlight">seien</span> schon gute Erfahrungen gemacht <span class="grammar-highlight">worden</span>, sagt Serkan Kaya.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">3.2 Konjunktiv II do Passado</h4>
+                    <div class="overflow-x-auto rounded-lg shadow-md border border-gray-200 mb-6">
+                        <table class="min-w-full divide-y divide-gray-200 striped-table">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Forma</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Exemplo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"><span class="grammar-highlight">haben / sein im Konjunktiv II</span> + Partizip Perfekt</td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">Hätten</span> meine Eltern ihren Blumenladen nicht eröffnet, <span class="grammar-highlight">wäre</span> ich sicherlich nicht in Deutschland geboren.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h5 class="text-lg font-medium text-gray-700 mb-2">3.2.1 Konjunktiv II do Passado com Verbo Modal</h5>
+                    <div class="overflow-x-auto rounded-lg shadow-md border border-gray-200 mb-6">
+                        <table class="min-w-full divide-y divide-gray-200 striped-table">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Forma</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Exemplo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"><span class="grammar-highlight">haben no Konjunktiv II</span> + Hauptverb + <span class="grammar-highlight">Modalverb no Infinitivo</span></td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">Hätten</span> meine Eltern ihren Blumenladen nicht eröffnet, <span class="grammar-highlight">hätten</span> sie provavelmente nicht in Deutschland bleiben <span class="grammar-highlight">können</span>.</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50">No Nebensatz, os três verbos normalmente ficam nesta ordem no final da frase: <i>haben - Hauptverb - Modalverb</i> (ex: <i>Wenn damals nicht so viele Industrien <span class="grammar-highlight">hätten schließen müssen</span>, würde es der ostdeutschen Wirtschaft heute vielleicht besser gehen.</i>)</p>
+                    </div>
+                `
+            },
+            "satzverbindungen": {
+                title: "4. Conectores de Frases",
+                content: `
+                    <p class="text-gray-700 mb-4">Para expressar relações de conteúdo (ex: propósito, motivo, condição, consequência, modo, tempo, etc.), usam-se conectores de Nebensatz (Subjunktionen), conectores de Hauptsatz (Verbindungsadverbien) e preposições ou expressões com preposição.</p>
+                    <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
+                        <li>Um conector de Nebensatz introduz um Nebensatz que pode estar antes, depois ou dentro do Hauptsatz.</li>
+                        <li>Um conector de Hauptsatz conecta dois Hauptsätze. Ele pode estar no Vorfeld (posição 1) ou no Mittelfeld.</li>
+                        <li>Preposições ou expressões com preposição ficam antes de grupos nominais. Expressões com preposições podem estar no Vorfeld (posição 1) ou no Mittelfeld.</li>
+                    </ul>
+
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">4.1 Relações Adversativas</h4>
+                    <p class="text-gray-700 mb-4">Com frases e expressões adversativas, pode-se expressar contrastes.</p>
+                    <div class="overflow-x-auto rounded-lg shadow-md border border-gray-200 mb-6">
+                        <table class="min-w-full divide-y divide-gray-200 striped-table">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Conector/Expressão</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Exemplo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nebensatz-Konnektor</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">wohingegen</span></td><td class="px-6 py-4 text-sm text-gray-700">Die Wahrscheinlichkeit zu sterben, ist für die Hydra ihr ganzes Leben lang gleich groß, <span class="grammar-highlight">wohingegen</span> das Sterberisiko beim Menschen mit dem Alter zunimmt.</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Hauptsatz-Konnektoren</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">demgegenüber</span>, <span class="grammar-highlight">im Gegensatz dazu</span></td><td class="px-6 py-4 text-sm text-gray-700">Die Zellen der Hydra sind ihr Leben lang gleich aktiv. <span class="grammar-highlight">Demgegenüber</span> werden unsere Zellen im Alter immer träger.<br>Ich habe erwartet, dass Unsterblichkeit im Fokus steht. <span class="grammar-highlight">Im Gegensatz dazu</span> spielt dieses Thema keine zentrale Rolle.</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Preposição + Dativ</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">entgegen</span></td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">Entgegen</span> meinen Erwartungen geht Schroeder gar nicht auf solche ethischen Fragen ein.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">4.2 Relações Causais</h4>
+                    <p class="text-gray-700 mb-4">Com frases e expressões causais, pode-se indicar motivos. Responde-se às perguntas: <i>Warum?, Wieso?, Weshalb?, Aus welchem Grund?</i></p>
+                    <div class="overflow-x-auto rounded-lg shadow-md border border-gray-200 mb-6">
+                        <table class="min-w-full divide-y divide-gray-200 striped-table">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Conector/Expressão</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Exemplo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Hauptsatz-Konnektor</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">aus diesem Grund</span></td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">Aus diesem Grund</span> können wir in einer Fremdsprache extro-vertierter und mutiger sein.</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Preposição + Genitivo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">angesichts</span></td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">Angesichts</span> solcher Beobachtungen wird in der Mehrsprachig- keitsforschung heute davon ausgegangen, dass die meisten Menschen zu ihrer Erstsprache eine engere emotionale Verbindung haben.</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nebensatz-Konnektor</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">zumal</span></td><td class="px-6 py-4 text-sm text-gray-700">In der Fremdsprache kann man sich in neuen Rollen ausprobieren, <span class="grammar-highlight">zumal</span> hier die Konzepte, Werte und Rollen aus der Erstsprache oft nicht gelten.</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Preposição + Genitivo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">anlässlich</span></td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">Anlässlich</span> des Europäischen Tags der Sprachen werfen wir einen Blick auf die Mehrsprachigkeitsforschung.</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Preposição + Genitivo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">mangels</span></td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">Mangels</span> der emotionalen Nähe zur neuen Sprache denken, sprechen und handeln wir in der Fremdsprache distanzierter.</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50">Esses conectores e preposições são usados principalmente na linguagem escrita.</p>
+                    </div>
+
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">4.3 Relações Condicionais</h4>
+                    <p class="text-gray-700 mb-4">Com frases e expressões condicionais, pode-se expressar condições.</p>
+                    <div class="overflow-x-auto rounded-lg shadow-md border border-gray-200 mb-6">
+                        <table class="min-w-full divide-y divide-gray-200 striped-table">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Conector/Expressão</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Exemplo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nebensatz-Konnektor</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">für den Fall, dass</span></td><td class="px-6 py-4 text-sm text-gray-700">Als Pate oder Patin übernimmt man die Verantwortung für ein Kind <span class="grammar-highlight">für den Fall, dass</span> den Eltern etwas passiert.</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Expressão + Genitivo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">im Falle</span></td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">Im Falle</span> einer Patenschaft verschwimmen die Grenzen zwischen Freundschaft und Familie.</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nebensatz-Konnektor (condição necessária)</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">vorausgesetzt, dass</span></td><td class="px-6 py-4 text-sm text-gray-700">Man kann in jeder Lebensphase gute Freunde haben, <span class="grammar-highlight">vorausgesetzt, dass</span> man Interessen teilt.</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nebensatz-Konnektor (condição assumida)</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">mal angenommen, dass</span></td><td class="px-6 py-4 text-sm text-gray-700">Aber <span class="grammar-highlight">mal angenommen, dass</span> meine Kinder Geld bräuchten, wäre das eine völlig andere Situation.</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Hauptsatz-Konnektoren (caso contrário)</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">sonst</span>, <span class="grammar-highlight">andernfalls</span></td><td class="px-6 py-4 text-sm text-gray-700">Das muss man akzeptieren. <span class="grammar-highlight">Sonst</span> wird man enttäuscht.<br>Man muss seine Expectativas em relação a uma amizade reduzir. <span class="grammar-highlight">Andernfalls</span> gibt es nur Ärger und Streit.</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50"><i>angenommen</i> e <i>vorausgesetzt</i> também podem ser usados sem <i>dass</i>. Nesse caso, o verbo fica na posição 2 (ex: <i>Aber <span class="grammar-highlight">mal angenommen</span>, meine Kinder bräuchten Geld, wäre das eine völlig andere Situation.</i>). A vírgula após <i>angenommen</i> ou <i>vorausgesetzt</i> serve para melhor legibilidade e pode ser omitida.</p>
+                        <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50">Os conectores de Hauptsatz <i>sonst</i> e <i>andernfalls</i> sempre ficam na segunda frase ou na segunda parte da frase (ex: <i>Das muss man akzeptieren, <span class="grammar-highlight">sonst</span> wird man enttäuscht.</i>).</p>
+                    </div>
+
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">4.4 Relações Consecutivas</h4>
+                    <p class="text-gray-700 mb-4">Com frases e expressões consecutivas, pode-se indicar consequências.</p>
+                    <div class="overflow-x-auto rounded-lg shadow-md border border-gray-200 mb-6">
+                        <table class="min-w-full divide-y divide-gray-200 striped-table">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Conector/Expressão</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Exemplo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nebensatz-Konnektor</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">weshalb/weswegen</span></td><td class="px-6 py-4 text-sm text-gray-700">Technische Errungenschaften von Frauen sind insgesamt weniger bekannt, <span class="grammar-highlight">weshalb/weswegen</span> wir auch auf unserer Webseite [...] innovativ denkende Frauen vorstellen.</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Hauptsatz-Konnektoren</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">demzufolge</span>, <span class="grammar-highlight">folglich</span>, <span class="grammar-highlight">infolgedessen</span></td><td class="px-6 py-4 text-sm text-gray-700">Die Ingenieurwissenschaften sind traditionell noch immer männlich geprägt. <span class="grammar-highlight">Demzufolge</span> fehlen weibliche Perspektiven.<br>Das heißt, der "Durchschnittsmann" wird zum allgemeinen Standard erhoben. <span class="grammar-highlight">Folglich</span> sind diese Produkte dann für Frauen nicht oder weniger gut geeignet.<br>Viele Produkte [...] sind für "Männerhände" gemacht. <span class="grammar-highlight">Infolgedessen</span> sind sie für die meisten Frauen [...] zu groß und zu schwer.</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Preposição + Genitivo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">infolge</span></td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">Infolge</span> des geringeren Frauenanteils fehlen wichtige Perspektiven und Erfahrungen im Fach.</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50">O Nebensatz com <i>weshalb</i> e o Hauptsatz com <i>demzufolge</i> sempre ficam depois do Hauptsatz.</p>
+                    </div>
+
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">4.5 Relações Concessivas</h4>
+                    <p class="text-gray-700 mb-4">Com frases e expressões concessivas, pode-se indicar razões contrárias e expressar contradições.</p>
+                    <div class="overflow-x-auto rounded-lg shadow-md border border-gray-200 mb-6">
+                        <table class="min-w-full divide-y divide-gray-200 striped-table">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Conector/Expressão</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Exemplo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nebensatz-Konnektoren</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">wenn... auch</span>, <span class="grammar-highlight">wobei</span></td><td class="px-6 py-4 text-sm text-gray-700">Hoje venho com meu salário bem, <span class="grammar-highlight">mesmo que</span> eu nunca ganhe tanto quanto meus pais.</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Hauptsatz-Konnektoren</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">allerdings</span>, <span class="grammar-highlight">nichtsdestotrotz</span></td><td class="px-6 py-4 text-sm text-gray-700">Eu tive um excelente Abitur, o que encheu meus pais de orgulho. Nossas ideias sobre meu futuro profissional, <span class="grammar-highlight">no entanto</span>, divergiam muito.<br>Meus pais sempre tiveram um emprego seguro. <span class="grammar-highlight">No entanto</span>, o dinheiro era muitas vezes escasso para nós.</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Preposição + Genitivo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">ungeachtet</span></td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">Apesar</span> das minhas boas notas, às vezes me sinto inseguro na universidade.</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50">Com o conector bipartido <i>wenn... auch</i>, o sujeito fica entre as duas partes (ex: <i>..., <span class="grammar-highlight">wenn ich auch</span> niemals so viel verdienen werde wie meine Eltern.</i>).</p>
+                        <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50">O Nebensatz com <i>wobei</i> geralmente fica depois do Hauptsatz. Na linguagem falada, ele também pode vir primeiro, introduzindo uma correção à afirmação anterior (ex: <i><span class="grammar-highlight">Wobei</span> ich zugeben muss:...</i>).</p>
+                    </div>
+
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">4.6 Relações Modais</h4>
+                    <p class="text-gray-700 mb-4">Com frases e expressões modais, pode-se indicar o modo, meios e descrever circunstâncias.</p>
+                    <div class="overflow-x-auto rounded-lg shadow-md border border-gray-200 mb-6">
+                        <table class="min-w-full divide-y divide-gray-200 striped-table">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Conector/Expressão</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Exemplo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nebensatz-Konnektoren</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">wodurch</span>, <span class="grammar-highlight">womit</span></td><td class="px-6 py-4 text-sm text-gray-700">Die Bitte um Entschuldigung konfrontiert das Gegenüber mit Gefühlen von Unsicherheit, <span class="grammar-highlight">wodurch</span> oft eine peinliche Situation entsteht.<br>Ein solches Verhalten stellt menschliche Größe unter Beweis, <span class="grammar-highlight">womit</span> man die Hochachtung seiner Mitmenschen gewinnt.</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Hauptsatz-Konnektoren</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">auf diese Weise</span>, <span class="grammar-highlight">damit</span></td><td class="px-6 py-4 text-sm text-gray-700">Auch einen bestehenden Konflikt kann eine Entschuldigung lösen. <span class="grammar-highlight">Auf diese Weise</span> können beide Seiten wieder zueinander finden.<br>Selbst in heiklen Situationen besänftigt eine aufrichtige Entschuldigung das Gegenüber. <span class="grammar-highlight">Damit</span> kann man eine Menge Ärger vermeiden.</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Preposições + Genitivo</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"><span class="grammar-highlight">mithilfe</span>, <span class="grammar-highlight">mittels</span></td><td class="px-6 py-4 text-sm text-gray-700">Man möchte <span class="grammar-highlight">mithilfe</span> einer Entschuldigung erreichen, zu einer Gemeinschaft dazuzugehören.<br><span class="grammar-highlight">Mittels</span> einer Entschuldigung sammelt man aber noch weitere Pluspunkte.</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50">O Nebensatz com <i>wodurch</i> e <i>womit</i> sempre fica depois do Hauptsatz.</p>
+                        <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50">Os conectores de Hauptsatz <i>auf diese Weise</i> e <i>damit</i> sempre ficam na segunda frase ou na segunda parte da frase (ex: <i>Auch einen bestehenden Konflito kann eine Entschuldigung lösen, <span class="grammar-highlight">auf diese Weise</span> können beide Seiten wieder zueinander finden.</i>).</p>
+                        <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50">Com substantivos no plural sem artigo ou adjetivo, usa-se <i>mithilfe</i> junto com a preposição <i>von + Dativ</i> (ex: <i><span class="grammar-highlight">mithilfe von</span> Entschuldigungen</i>).</p>
+                        <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50"><i>Mittels + Genitiv</i> é usado quase exclusivamente na linguagem escrita (ex: em artigos de jornal, contratos, documentos oficiais).</p>
+                        <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50">Com substantivos no singular e sem artigo ou adjetivo, o substantivo não é declinado (ex: <i><span class="grammar-highlight">mittels</span> Telefon</i>). Com substantivos no plural sem artigo ou adjetivo, usa-se o Dativ (ex: <i><span class="grammar-highlight">mittels</span> Schuldeingeständnissen</i>).</p>
+                    </div>
+                `
+            },
+            "stil": {
+                title: "5. Estilo Verbal e Nominal",
+                content: `
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">5.1 Estilo Verbal</h4>
+                    <p class="text-gray-700 mb-4">No estilo verbal, as informações são expressas em frases (Haupt- e Nebensätze) com sujeito e predicado. O estilo verbal é geralmente mais compreensível e muitas vezes mais vivo.</p>
+                    <p class="text-gray-700 mb-4">O estilo verbal é encontrado tanto em contextos formais quanto informais, especialmente quando algo está sendo narrado.</p>
+
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">5.2 Estilo Nominal</h4>
+                    <p class="text-gray-700 mb-4">No estilo nominal, informações que seriam expressas em frases completas no estilo verbal são resumidas em grupos nominais. As informações são apresentadas de forma mais curta e concisa. O estilo nominal é usado quando muita informação precisa ser transmitida em pouco espaço (de forma concisa).</p>
+                    <p class="text-gray-700 mb-4">O estilo nominal é encontrado principalmente em contextos formais, por exemplo, na linguagem burocrática e técnica. Pontos de tópico ou títulos também são frequentemente formulados no estilo nominal.</p>
+                    <p class="text-gray-700 mb-4">Um grupo nominal sempre contém um substantivo principal como núcleo, que frequentemente é derivado de um verbo (ex: <i>sich vernetzen → die Vernetzung</i>).</p>
+                    <div class="overflow-x-auto rounded-lg shadow-md border border-gray-200 mb-6">
+                        <table class="min-w-full divide-y divide-gray-200 striped-table">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Estilo Verbal (Frase)</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Estilo Nominal (Grupo Nominal)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Substantivo (Nominativo) no Ativo → Genitivo<br>Die Gehirnzellen vernetzen sich.</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">→</td><td class="px-6 py-4 text-sm text-gray-700">(die) <span class="grammar-highlight">Vernetzung</span> der Gehirnzellen</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Pronome pessoal → Artigo possessivo<br>Sie vernetzen sich.</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">→</td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">ihre Vernetzung</span></td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Acusativo no Ativo → Genitivo<br>Substantivo (Nominativo) no Passivo → Genitivo<br>Bewegung regt die Durchblutung an.<br>Die Durchblutung wird angeregt.</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">→</td><td class="px-6 py-4 text-sm text-gray-700">(die) <span class="grammar-highlight">Anregung</span> der Durchblutung</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Advérbio → Adjetivo declinado<br>Informationen werden schneller verarbeitet.</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">→</td><td class="px-6 py-4 text-sm text-gray-700"><span class="grammar-highlight">schnellere Verarbeitung</span> von Informações</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Substantivo sem artigo → von + Dativ<br>Der Körper schüttet Glückshormone aus und baut Stress ab.</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">→</td><td class="px-6 py-4 text-sm text-gray-700">(die) <span class="grammar-highlight">Ausschüttung von</span> Glückshormonen<br>(der) <span class="grammar-highlight">Abbau von</span> Stress</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Coisa/Pessoa causadora → durch + coisa/pessoa causadora<br>Der Ingenieur Thomas Alva Edison erfindet die Glühlampe.</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">→</td><td class="px-6 py-4 text-sm text-gray-700">die <span class="grammar-highlight">Erfindung</span> der Glühlampe <span class="grammar-highlight">durch</span> den Ingenieur Thomas Alva Edison</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Verbo + Dativ → Substantivo com Preposição<br>Man vertraut der neuen Technologie.</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">→</td><td class="px-6 py-4 text-sm text-gray-700">(das) <span class="grammar-highlight">Vertrauen in</span> die neue Technologie</td></tr>
+                                <tr><td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Verbo com Preposição → Substantivo com Preposição<br>Das Lagerfeuer schützt vor wilden Tieren.</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">→</td><td class="px-6 py-4 text-sm text-gray-700">(der) <span class="grammar-highlight">Schutz vor</span> wilden Tieren</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50">Ao reformular verbos com Dativ em um grupo nominal, uma preposição é adicionada ao substantivo (ex: <i>helfen → die Hilfe <span class="grammar-highlight">bei/für</span>; vertrauen → das Vertrauen <span class="grammar-highlight">in / zu</span></i>). Também ocorre com verbos com Acusativo que uma preposição é adicionada ao substantivo (ex: <i>beeinflussen → <span class="grammar-highlight">Einfluss auf</span></i>).</p>
+                        <p class="text-gray-600 text-sm px-6 py-3 bg-gray-50">Com verbos com preposição fixa, a preposição geralmente permanece a mesma (ex: <i>schützen <span class="grammar-highlight">vor</span> → der Schutz <span class="grammar-highlight">vor</span></i>); Exceções: <i>erwarten <span class="grammar-highlight">von</span> → die Erwartung <span class="grammar-highlight">an</span>; sich interessieren <span class="grammar-highlight">für</span> → das Interesse <span class="grammar-highlight">an</span></i>.</p>
+                    </div>
+                `
+            }
+        };
+
+        // --- Grammar Section Logic ---
+        const grammarContentContainer = document.getElementById('grammarContentContainer');
+        const vocabTab = document.getElementById('vocabTab');
+        const grammarTab = document.getElementById('grammarTab');
+        const vocabularySection = document.getElementById('vocabularySection');
+        const grammarSection = document.getElementById('grammarSection');
+
+        let currentGrammarTopic = null; // Track current grammar topic
+
+        // Function to render grammar content for a specific topic
+        function renderGrammarContent(topicKey) {
+            const topic = grammarData[topicKey];
+            if (topic) {
+                // Set the innerHTML of grammarContent (which is inside grammarContentContainer)
+                const grammarContentDiv = grammarContentContainer.querySelector('#grammarContent');
+                if (grammarContentDiv) {
+                    grammarContentDiv.innerHTML = `<h3 class="text-2xl font-bold text-gray-800 mb-6">${topic.title}</h3>` + topic.content;
+                    currentGrammarTopic = topicKey;
+                    // Re-apply search filter if there's a search term
+                    const grammarSearchInput = document.getElementById('grammarSearchInput');
+                    if (grammarSearchInput && grammarSearchInput.value) {
+                        filterGrammarContent();
+                    }
+                }
+            } else {
+                const grammarContentDiv = grammarContentContainer.querySelector('#grammarContent');
+                if (grammarContentDiv) {
+                    grammarContentDiv.innerHTML = '<p class="text-gray-600 text-center py-8">Tópico de gramática não encontrado.</p>';
+                }
+                currentGrammarTopic = null;
+            }
+        }
+
+        // Function to filter grammar content based on search input
+        function filterGrammarContent() {
+            const grammarSearchInput = document.getElementById('grammarSearchInput');
+            const grammarContentDiv = grammarContentContainer.querySelector('#grammarContent');
+
+            if (!grammarSearchInput || !grammarContentDiv || !currentGrammarTopic) {
+                return; // Exit if elements are not ready or no topic is selected
+            }
+
+            const searchTerm = grammarSearchInput.value.toLowerCase();
+            const originalContentHtml = grammarData[currentGrammarTopic].content; // Get original content for current topic
+
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = `<h3 class="text-2xl font-bold text-gray-800 mb-6">${grammarData[currentGrammarTopic].title}</h3>` + originalContentHtml;
+
+            let foundMatch = false;
+
+            function highlightText(node) {
+                if (node.nodeType === 3) { // Text node
+                    const text = node.nodeValue;
+                    const lowerText = text.toLowerCase();
+                    let lastIndex = 0;
+                    const fragments = [];
+
+                    while (lastIndex < text.length) {
+                        const index = lowerText.indexOf(searchTerm, lastIndex);
+                        if (index === -1) {
+                            fragments.push(document.createTextNode(text.substring(lastIndex)));
+                            break;
+                        } else {
+                            foundMatch = true;
+                            fragments.push(document.createTextNode(text.substring(lastIndex, index)));
+                            const span = document.createElement('span');
+                            span.className = 'bg-yellow-200'; // Highlight color
+                            span.textContent = text.substring(index, index + searchTerm.length);
+                            fragments.push(span);
+                            lastIndex = index + searchTerm.length;
+                        }
+                    }
+                    if (fragments.length > 0) {
+                        fragments.forEach(fragment => node.parentNode.insertBefore(fragment, node));
+                        node.parentNode.removeChild(node);
+                    }
+                } else if (node.nodeType === 1 && node.tagName !== 'SCRIPT' && node.tagName !== 'STYLE') { // Element node
+                    Array.from(node.childNodes).forEach(highlightText);
+                }
+            }
+
+            // Clear previous highlights from the current content
+            Array.from(tempDiv.querySelectorAll('.bg-yellow-200')).forEach(span => {
+                const parent = span.parentNode;
+                parent.replaceChild(document.createTextNode(span.textContent), span);
+                parent.normalize(); // Merge adjacent text nodes
+            });
+
+            if (searchTerm) {
+                highlightText(tempDiv);
+            }
+
+            grammarContentDiv.innerHTML = tempDiv.innerHTML; // Update the displayed content
+
+            if (searchTerm && !foundMatch) {
+                grammarContentDiv.innerHTML += '<p class="text-gray-600 text-center py-4 text-red-500">Nenhum resultado encontrado para a pesquisa.</p>';
+            }
+        }
+
+        // Event listener for grammar search input (needs to be attached after grammar content is rendered)
+        // This will be handled by the showTab function after the initial render of the grammar section
+        function setupGrammarListeners() {
+            const grammarNavButtons = document.querySelectorAll('#grammarSection .grammar-nav-btn');
+            const grammarSearchInput = document.getElementById('grammarSearchInput');
+
+            // Remove existing listeners to prevent duplicates if setupGrammarListeners is called multiple times
+            grammarSearchInput.removeEventListener('input', filterGrammarContent);
+            grammarSearchInput.addEventListener('input', filterGrammarContent);
+
+            grammarNavButtons.forEach(button => {
+                // Remove existing listeners to prevent duplicates
+                const oldClickHandler = button.onclick; // Store the current handler if any
+                if (oldClickHandler) {
+                    button.removeEventListener('click', oldClickHandler);
+                }
+
+                button.addEventListener('click', (event) => {
+                    const targetTopic = event.target.dataset.target;
+                    renderGrammarContent(targetTopic);
+                    grammarNavButtons.forEach(btn => btn.classList.remove('bg-red-100', 'text-red-700'));
+                    event.target.classList.add('bg-red-100', 'text-red-700');
+                });
+            });
+
+            // Initial render of the first grammar topic when the grammar section is first shown
+            if (!currentGrammarTopic) {
+                renderGrammarContent("artikel-adjektiv");
+                const firstGrammarButton = document.querySelector('#grammarSection .grammar-nav-btn[data-target="artikel-adjektiv"]');
+                if (firstGrammarButton) {
+                    firstGrammarButton.classList.add('bg-red-100', 'text-red-700');
+                }
+            }
+        }
+
+
+        function showTab(tabId) {
+            vocabularySection.classList.add('hidden');
+            grammarSection.classList.add('hidden');
+            vocabTab.classList.remove('border-indigo-500', 'text-indigo-600');
+            grammarTab.classList.remove('border-indigo-500', 'text-indigo-600');
+
+            if (tabId === 'vocab') {
+                vocabularySection.classList.remove('hidden');
+                vocabTab.classList.add('border-indigo-500', 'text-indigo-600');
+            } else if (tabId === 'grammar') {
+                grammarSection.classList.remove('hidden');
+                grammarTab.classList.add('border-indigo-500', 'text-indigo-600');
+                setupGrammarListeners(); // Setup grammar listeners when grammar tab is clicked
+            }
+        }
+
+        vocabTab.addEventListener('click', () => showTab('vocab'));
+        grammarTab.addEventListener('click', () => showTab('grammar'));
+
+        // Initial render of the vocabulary table and show vocabulary tab
         document.addEventListener('DOMContentLoaded', () => {
             renderVocabularyTable(currentVocabulary);
+            showTab('vocab'); // Show vocabulary tab by default
         });
     </script>
 </body>
